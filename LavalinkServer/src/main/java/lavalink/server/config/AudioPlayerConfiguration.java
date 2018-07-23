@@ -10,6 +10,7 @@ import com.sedmelluq.discord.lavaplayer.source.soundcloud.SoundCloudAudioSourceM
 import com.sedmelluq.discord.lavaplayer.source.twitch.TwitchStreamAudioSourceManager;
 import com.sedmelluq.discord.lavaplayer.source.vimeo.VimeoAudioSourceManager;
 import com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager;
+import ml.duncte123.skybot.objects.audioManagers.clypit.ClypitAudioSourceManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
@@ -27,6 +28,8 @@ public class AudioPlayerConfiguration {
         if (serverConfig.isGcWarnings()) {
             audioPlayerManager.enableGcMonitoring();
         }
+
+        audioPlayerManager.registerSourceManager(new ClypitAudioSourceManager());
 
         if (sources.isYoutube()) {
             YoutubeAudioSourceManager youtube = new YoutubeAudioSourceManager();
