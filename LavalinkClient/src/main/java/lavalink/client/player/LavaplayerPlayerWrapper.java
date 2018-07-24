@@ -23,6 +23,7 @@
 package lavalink.client.player;
 
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
+import com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayer;
 import com.sedmelluq.discord.lavaplayer.player.event.AudioEventListener;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import com.sedmelluq.discord.lavaplayer.track.playback.AudioFrame;
@@ -30,10 +31,10 @@ import lavalink.client.player.event.IPlayerEventListener;
 
 public class LavaplayerPlayerWrapper implements IPlayer {
 
-    private final AudioPlayer player;
+    private final DefaultAudioPlayer player;
 
     public LavaplayerPlayerWrapper(AudioPlayer player) {
-        this.player = player;
+        this.player = (DefaultAudioPlayer) player;
     }
 
     @Override
