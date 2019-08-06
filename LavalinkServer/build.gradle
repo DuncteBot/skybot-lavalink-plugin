@@ -39,7 +39,8 @@ dependencies {
     compile group: 'com.sedmelluq', name: 'jda-nas', version: jdaNasVersion
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: kotlinVersion
 
-    compile group: 'com.github.shredder121', name: 'jda-async-packetprovider', version: jappVersion
+//    compile group: 'com.github.shredder121', name: 'jda-async-packetprovider', version: jappVersion
+    compile group: 'com.github.MinnDevelopment', name: 'jda-async-packetprovider', version: '97af6715'
     //required by japp
     compile group: 'org.apache.commons', name: 'commons-lang3', version: commonsLangVersion
     compile group: 'org.springframework', name: 'spring-websocket', version: springWebSocketVersion

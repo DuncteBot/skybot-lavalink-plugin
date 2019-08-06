@@ -173,9 +173,9 @@ class SocketServer(
                 NativeAudioSendFactory()
             }
 
-            nativeAudioSendFactory
+//            nativeAudioSendFactory
             // TODO: Does not support JDA-4 yet
-//            AsyncPacketProviderFactory.adapt(nativeAudioSendFactory)
+            AsyncPacketProviderFactory.adapt(nativeAudioSendFactory)
         }
     }
 
