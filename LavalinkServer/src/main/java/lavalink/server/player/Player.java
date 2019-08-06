@@ -24,20 +24,23 @@ package lavalink.server.player;
 
 import com.sedmelluq.discord.lavaplayer.filter.equalizer.Equalizer;
 import com.sedmelluq.discord.lavaplayer.filter.equalizer.EqualizerFactory;
+import com.sedmelluq.discord.lavaplayer.format.StandardAudioDataFormats;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.player.event.AudioEventAdapter;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrackEndReason;
 import com.sedmelluq.discord.lavaplayer.track.playback.AudioFrame;
+import com.sedmelluq.discord.lavaplayer.track.playback.MutableAudioFrame;
 import lavalink.server.io.SocketContext;
 import lavalink.server.io.SocketServer;
-import net.dv8tion.jda.core.audio.AudioSendHandler;
+import net.dv8tion.jda.api.audio.AudioSendHandler;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.annotation.Nullable;
+import java.nio.ByteBuffer;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
@@ -48,8 +51,9 @@ public class Player extends AudioEventAdapter implements AudioSendHandler {
     private SocketContext socketContext;
     private final String guildId;
     private final AudioPlayer player;
+    private final MutableAudioFrame frame = new MutableAudioFrame();
+    private final ByteBuffer buffer = ByteBuffer.allocate(StandardAudioDataFormats.DISCORD_OPUS.maximumChunkSize());
     private AudioLossCounter audioLossCounter = new AudioLossCounter();
-    private AudioFrame lastFrame = null;
     private ScheduledFuture myFuture = null;
     private EqualizerFactory equalizerFactory = new EqualizerFactory();
     private boolean isEqualizerApplied = false;
@@ -61,6 +65,7 @@ public class Player extends AudioEventAdapter implements AudioSendHandler {
         this.player.addListener(this);
         this.player.addListener(new EventEmitter(audioPlayerManager, this));
         this.player.addListener(audioLossCounter);
+        this.frame.setBuffer(buffer);
     }
 
     public void play(AudioTrack track) {
@@ -143,20 +148,18 @@ public class Player extends AudioEventAdapter implements AudioSendHandler {
 
     @Override
     public boolean canProvide() {
-        lastFrame = player.provide();
-
-        if(lastFrame == null) {
-            audioLossCounter.onLoss();
-            return false;
-        } else {
+        if(player.provide(frame)) {
             audioLossCounter.onSuccess();
             return true;
+        } else {
+            audioLossCounter.onLoss();
+            return false;
         }
     }
 
     @Override
-    public byte[] provide20MsAudio() {
-        return lastFrame.getData();
+    public ByteBuffer provide20MsAudio() {
+        return buffer.flip();
     }
 
     @Override

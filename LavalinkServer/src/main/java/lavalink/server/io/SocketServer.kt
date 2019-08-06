@@ -31,7 +31,7 @@ import lavalink.server.config.ServerConfig
 import lavalink.server.player.Player
 import lavalink.server.player.TrackEndMarkerHandler
 import lavalink.server.util.Util
-import net.dv8tion.jda.core.audio.factory.IAudioSendFactory
+import net.dv8tion.jda.api.audio.factory.IAudioSendFactory
 import org.json.JSONObject
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
@@ -173,7 +173,9 @@ class SocketServer(
                 NativeAudioSendFactory()
             }
 
-            AsyncPacketProviderFactory.adapt(nativeAudioSendFactory)
+            nativeAudioSendFactory
+            // TODO: Does not support JDA-4 yet
+//            AsyncPacketProviderFactory.adapt(nativeAudioSendFactory)
         }
     }
 
