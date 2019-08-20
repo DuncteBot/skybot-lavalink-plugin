@@ -25,11 +25,9 @@ package lavalink.server.io
 import com.github.shredder121.asyncaudio.jda.AsyncPacketProviderFactory
 import com.sedmelluq.discord.lavaplayer.jdaudp.NativeAudioSendFactory
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager
-import com.sedmelluq.discord.lavaplayer.track.TrackMarker
 import lavalink.server.config.AudioSendFactoryConfiguration
 import lavalink.server.config.ServerConfig
 import lavalink.server.player.Player
-import lavalink.server.player.TrackEndMarkerHandler
 import lavalink.server.util.Util
 import net.dv8tion.jda.api.audio.factory.IAudioSendFactory
 import org.json.JSONObject
@@ -40,7 +38,7 @@ import org.springframework.web.socket.TextMessage
 import org.springframework.web.socket.WebSocketSession
 import org.springframework.web.socket.handler.TextWebSocketHandler
 import space.npstr.magma.Member
-import java.util.HashMap
+import java.util.*
 import java.util.concurrent.ConcurrentHashMap
 import java.util.function.Supplier
 
@@ -173,8 +171,6 @@ class SocketServer(
                 NativeAudioSendFactory()
             }
 
-//            nativeAudioSendFactory
-            // TODO: Does not support JDA-4 yet
             AsyncPacketProviderFactory.adapt(nativeAudioSendFactory)
         }
     }
