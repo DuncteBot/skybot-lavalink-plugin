@@ -52,7 +52,7 @@ public class Player extends AudioEventAdapter implements AudioSendHandler {
     private final String guildId;
     private final AudioPlayer player;
     private final MutableAudioFrame frame = new MutableAudioFrame();
-    private final ByteBuffer buffer = ByteBuffer.allocate(StandardAudioDataFormats.DISCORD_OPUS.maximumChunkSize());
+    private final ByteBuffer buffer = ByteBuffer.allocate(1024);
     private AudioLossCounter audioLossCounter = new AudioLossCounter();
     private ScheduledFuture myFuture = null;
     private EqualizerFactory equalizerFactory = new EqualizerFactory();
