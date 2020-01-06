@@ -47,15 +47,16 @@ class AudioPlayerConfiguration {
             if (playlistLoadLimit != null) youtube.setPlaylistPageCount(playlistLoadLimit)
             audioPlayerManager.registerSourceManager(youtube)
 
+            // Clyp.it, ph, speach and youtube filter override
             DuncteBotSources.registerCustom(audioPlayerManager,
                     "en-AU",
                     1,
                     true)
         }
         if (sources.isSoundcloud) {
-            val dataReader = DefaultSoundCloudDataReader();
-            val htmlDataLoader = DefaultSoundCloudHtmlDataLoader();
-            val formatHandler = DefaultSoundCloudFormatHandler();
+            val dataReader = DefaultSoundCloudDataReader()
+            val htmlDataLoader = DefaultSoundCloudHtmlDataLoader()
+            val formatHandler = DefaultSoundCloudFormatHandler()
 
             audioPlayerManager.registerSourceManager(SoundCloudAudioSourceManager(
                     serverConfig.isSoundcloudSearchEnabled,
@@ -63,7 +64,7 @@ class AudioPlayerConfiguration {
                     htmlDataLoader,
                     formatHandler,
                     DefaultSoundCloudPlaylistLoader(htmlDataLoader, dataReader, formatHandler)
-            ));
+            ))
         }
         if (sources.isBandcamp) audioPlayerManager.registerSourceManager(BandcampAudioSourceManager())
         if (sources.isTwitch) audioPlayerManager.registerSourceManager(TwitchStreamAudioSourceManager())
