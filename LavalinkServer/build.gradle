@@ -19,7 +19,7 @@ bootJar {
     archiveName = "Lavalink.jar"
 }
 
-sourceCompatibility = targetCompatibility = 1.8
+sourceCompatibility = targetCompatibility = 11
 
 bootRun {
     //compiling tests during bootRun increases the likelihood of catching broken tests locally instead of on the CI
@@ -36,6 +36,7 @@ bootRun {
 dependencies {
     compile group: 'space.npstr', name: 'Magma', version: magmaVersion
     compile group: 'com.sedmelluq', name: 'lavaplayer', version: lavaplayerVersion
+    compile group: 'com.sedmelluq', name: 'lavaplayer-ext-youtube-rotator', version: lavaplayerIpRotatorVersion
     compile group: 'com.sedmelluq', name: 'jda-nas', version: jdaNasVersion 
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: kotlinVersion
 
