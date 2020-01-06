@@ -1,25 +1,18 @@
 package lavalink.server.config
 
+import com.dunctebot.sourcemanagers.DuncteBotSources
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager
 import com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager
 import com.sedmelluq.discord.lavaplayer.source.bandcamp.BandcampAudioSourceManager
 import com.sedmelluq.discord.lavaplayer.source.beam.BeamAudioSourceManager
 import com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager
 import com.sedmelluq.discord.lavaplayer.source.local.LocalAudioSourceManager
-import com.sedmelluq.discord.lavaplayer.source.soundcloud.DefaultSoundCloudDataReader
-import com.sedmelluq.discord.lavaplayer.source.soundcloud.DefaultSoundCloudFormatHandler
-import com.sedmelluq.discord.lavaplayer.source.soundcloud.DefaultSoundCloudHtmlDataLoader
-import com.sedmelluq.discord.lavaplayer.source.soundcloud.DefaultSoundCloudPlaylistLoader
-import com.sedmelluq.discord.lavaplayer.source.soundcloud.SoundCloudAudioSourceManager
+import com.sedmelluq.discord.lavaplayer.source.soundcloud.*
 import com.sedmelluq.discord.lavaplayer.source.twitch.TwitchStreamAudioSourceManager
 import com.sedmelluq.discord.lavaplayer.source.vimeo.VimeoAudioSourceManager
 import com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager
 import com.sedmelluq.lava.extensions.youtuberotator.YoutubeIpRotator
-import com.sedmelluq.lava.extensions.youtuberotator.planner.AbstractRoutePlanner
-import com.sedmelluq.lava.extensions.youtuberotator.planner.BalancingIpRoutePlanner
-import com.sedmelluq.lava.extensions.youtuberotator.planner.NanoIpRoutePlanner
-import com.sedmelluq.lava.extensions.youtuberotator.planner.RotatingIpRoutePlanner
-import com.sedmelluq.lava.extensions.youtuberotator.planner.RotatingNanoIpRoutePlanner
+import com.sedmelluq.lava.extensions.youtuberotator.planner.*
 import com.sedmelluq.lava.extensions.youtuberotator.tools.ip.Ipv4Block
 import com.sedmelluq.lava.extensions.youtuberotator.tools.ip.Ipv6Block
 import org.slf4j.LoggerFactory
@@ -53,6 +46,11 @@ class AudioPlayerConfiguration {
             val playlistLoadLimit = serverConfig.youtubePlaylistLoadLimit
             if (playlistLoadLimit != null) youtube.setPlaylistPageCount(playlistLoadLimit)
             audioPlayerManager.registerSourceManager(youtube)
+
+            DuncteBotSources.registerCustom(audioPlayerManager,
+                    "en-AU",
+                    1,
+                    true)
         }
         if (sources.isSoundcloud) {
             val dataReader = DefaultSoundCloudDataReader();

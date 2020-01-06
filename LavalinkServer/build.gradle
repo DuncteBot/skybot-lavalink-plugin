@@ -59,6 +59,8 @@ dependencies {
     compile group: 'io.prometheus', name: 'simpleclient_logback', version: prometheusVersion
     compile group: 'io.prometheus', name: 'simpleclient_servlet', version: prometheusVersion
 
+    compile group: 'com.github.dunctebot', name: 'skybot-source-managers', version: duncteSourceManagersVersion
+
     testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springBootVersion
 }
 
