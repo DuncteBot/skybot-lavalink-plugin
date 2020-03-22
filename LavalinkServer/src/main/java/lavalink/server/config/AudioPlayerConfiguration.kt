@@ -31,7 +31,7 @@ class AudioPlayerConfiguration {
     private val log = LoggerFactory.getLogger(AudioPlayerConfiguration::class.java)
 
     @Bean
-    fun audioPlayerManagerSupplier(sources: AudioSourcesConfig, serverConfig: ServerConfig, routePlanner: AbstractRoutePlanner?) = Supplier<AudioPlayerManager> {
+    fun audioPlayerManagerSupplier(sources: AudioSourcesConfig, serverConfig: ServerConfig, routePlanner: AbstractRoutePlanner?): AudioPlayerManager {
         val audioPlayerManager = DefaultAudioPlayerManager()
 
         if (serverConfig.isGcWarnings) {
@@ -75,12 +75,7 @@ class AudioPlayerConfiguration {
 
         audioPlayerManager.configuration.isFilterHotSwapEnabled = true
 
-        audioPlayerManager
-    }
-
-    @Bean
-    fun restAudioPlayerManager(supplier: Supplier<AudioPlayerManager>): AudioPlayerManager {
-        return supplier.get()
+        return audioPlayerManager
     }
 
     @Bean

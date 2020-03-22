@@ -3,7 +3,7 @@ buildscript {
         springBootVersion = '2.1.8.RELEASE'
         gradleGitVersion = '1.5.2'
         sonarqubeVersion = '2.6.2'
-        kotlinVersion = '1.3.41'
+        kotlinVersion = '1.3.61'
         testLoggerVersion = '1.6.0'
     }
     repositories {
@@ -57,7 +57,7 @@ subprojects {
 //        lavaplayerVersion               = '1.3.33'
         lavaplayerVersion               = '914ebc2'
         lavaplayerIpRotatorVersion      = '0.1.7'
-        magmaVersion                    = '0.12.3'
+        magmaVersion                    = '0.12.5'
         jdaNasVersion                   = '1.1.0'
         jappVersion                     = '1.3.2-MINN'
 
