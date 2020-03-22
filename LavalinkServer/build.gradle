@@ -35,7 +35,8 @@ bootRun {
 
 dependencies {
     compile group: 'space.npstr', name: 'Magma', version: magmaVersion
-    compile group: 'com.sedmelluq', name: 'lavaplayer', version: lavaplayerVersion
+//    compile group: 'com.sedmelluq', name: 'lavaplayer', version: lavaplayerVersion
+    compile group: 'com.github.duncte123', name: 'lavaplayer', version: lavaplayerVersion
     compile group: 'com.sedmelluq', name: 'lavaplayer-ext-youtube-rotator', version: lavaplayerIpRotatorVersion
     compile group: 'com.sedmelluq', name: 'jda-nas', version: jdaNasVersion 
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: kotlinVersion
@@ -59,7 +60,7 @@ dependencies {
     compile group: 'io.prometheus', name: 'simpleclient_logback', version: prometheusVersion
     compile group: 'io.prometheus', name: 'simpleclient_servlet', version: prometheusVersion
 
-    compile group: 'com.github.dunctebot', name: 'skybot-source-managers', version: duncteSourceManagersVersion
+    compile group: 'com.dunctebot', name: 'sourcemanagers', version: duncteSourceManagersVersion
 
     testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springBootVersion
 }
