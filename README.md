@@ -21,12 +21,14 @@ Being used in production by FredBoat, Dyno, Rythm, LewdBot, and more.
 
 ## Requirements
 
-* Java 11 LTS or greater required.
+* Java 11* LTS or greater required.
 * OpenJDK or Zulu running on Linux AMD64 is officially supported.
 
 Support for Darwin (Mac), Windows AMD64, and Linux ARM (Raspberry Pi) is provided on a best-effort basis. This is dependent on Lavaplayer's native libraries.
 
 Support for other JVMs is also best-effort. Periodic CPU utilization stats are prone to not work everywhere.
+
+**\*Java 11 appears to have some issues with Discord's TLS 1.3. Java 14 has other undiagnosed HTTPS problems. Use Java 13. Docker images have been updated.** See [#258](https://github.com/Frederikam/Lavalink/issues/258), [#260](https://github.com/Frederikam/Lavalink/issues/260)
 
 ## Changelog
 
@@ -74,7 +76,7 @@ users about the compatibility of their clients to the Lavalink server.
 * [SandySounds](https://github.com/MrJohnCoder/SandySounds) (JavaScript)
 * [eris-lavalink](https://github.com/briantanner/eris-lavalink) ([eris](https://github.com/abalabahaha/eris), JavaScript)
 * [Shoukaku](https://github.com/Deivu/Shoukaku) ([discord.js](https://github.com/discordjs/discord.js), JavaScript)
-* [discord.js-lavalink](https://github.com/MrJacz/discord.js-lavalink/) ([discord.js](https://github.com/discordjs/discord.js), JavaScript)
+* [Lavacord](https://github.com/lavacord/lavacord) (JavaScript)
 * [SharpLink](https://github.com/Devoxin/SharpLink) ([Discord.Net](https://github.com/RogueException/Discord.Net), .NET)
 * [Victoria](https://github.com/Yucked/Victoria) ([Discord.NET](https://github.com/RogueException/Discord.Net), .NET)
 * [Lavalink.NET](https://github.com/Dev-Yukine/Lavalink.NET) (.NET)
