@@ -53,9 +53,9 @@ subprojects {
 
     ext {
         //@formatter:off
-        duncteSourceManagersVersion     = '1.2.3'
+        duncteSourceManagersVersion     = '1.4.0'
 //        lavaplayerVersion               = '1.3.44'
-        lavaplayerVersion               = 'fa8545b'
+        lavaplayerVersion               = 'be6e364'
         lavaplayerIpRotatorVersion      = '0.1.7'
         magmaVersion                    = '0.12.6'
         jdaNasVersion                   = '1.1.0'
