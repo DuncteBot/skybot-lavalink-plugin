@@ -4,6 +4,8 @@ Allows for sending audio without it ever reaching any of your shards.
 
 Being used in production by FredBoat, Dyno, Rythm, LewdBot, and more.
 
+A [very simple example bot](Testbot) is available.
+
 [![JDA guild](https://discordapp.com/api/guilds/125227483518861312/embed.png?style=banner2)](https://discord.gg/jtAWrzU)
 
 ## Features
@@ -74,6 +76,7 @@ users about the compatibility of their clients to the Lavalink server.
 * [pylava](https://github.com/Pandentia/pylava) (discord.py, Python)
 * [SandySounds](https://github.com/MrJohnCoder/SandySounds) (JavaScript)
 * [eris-lavalink](https://github.com/briantanner/eris-lavalink) ([eris](https://github.com/abalabahaha/eris), JavaScript)
+* [LavaClient](https://github.com/lavaclient/lavaclient) (JavaScript)
 * [Shoukaku](https://github.com/Deivu/Shoukaku) ([discord.js](https://github.com/discordjs/discord.js), JavaScript)
 * [Lavacord](https://github.com/lavacord/lavacord) (JavaScript)
 * [SharpLink](https://github.com/Devoxin/SharpLink) ([Discord.Net](https://github.com/RogueException/Discord.Net), .NET)
