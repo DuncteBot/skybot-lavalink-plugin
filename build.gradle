@@ -7,6 +7,7 @@ buildscript {
         testLoggerVersion = '1.6.0'
     }
     repositories {
+        mavenLocal()
         maven { url "https://plugins.gradle.org/m2/" }
         maven { url 'http://repo.spring.io/plugins-release' }
         maven { url 'https://jitpack.io' }
