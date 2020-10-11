@@ -56,7 +56,7 @@ subprojects {
         //@formatter:off
         duncteSourceManagersVersion     = '1.4.0'
 //        lavaplayerVersion               = '1.3.50'
-        lavaplayerVersion               = '21f70dd'
+        lavaplayerVersion               = '8a77f40'
         lavaplayerIpRotatorVersion      = '0.2.3'
         jdaNasVersion                   = '1.1.0'
         jappVersion                     = '1.3.2-MINN'
