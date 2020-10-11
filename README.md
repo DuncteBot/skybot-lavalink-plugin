@@ -80,6 +80,7 @@ users about the compatibility of their clients to the Lavalink server.
 * [Shoukaku](https://github.com/Deivu/Shoukaku) ([discord.js](https://github.com/discordjs/discord.js), JavaScript)
 * [Lavacord](https://github.com/lavacord/lavacord) (JavaScript)
 * [LavaJS](https://github.com/Projects-Me/LavaJS) ([discord.js](https://github.com/discordjs/discord.js), JavaScript/TypeScript)
+* [EvoLava](https://github.com/EvolveJS/EvoLava) ([EvolveJS](https://github.com/EvolveJS/EvolveJS), Javascript/Typescript)
 * [SharpLink](https://github.com/Devoxin/SharpLink) ([Discord.Net](https://github.com/RogueException/Discord.Net), .NET)
 * [Victoria](https://github.com/Yucked/Victoria) ([Discord.NET](https://github.com/RogueException/Discord.Net), .NET)
 * [Lavalink.NET](https://github.com/Dev-Yukine/Lavalink.NET) (.NET)
@@ -88,7 +89,8 @@ users about the compatibility of their clients to the Lavalink server.
 * [gavalink](https://github.com/foxbot/gavalink) (Go)
 * [Magma](https://github.com/initzx/magma/) (discord.py, Python)
 * [lavapotion](https://github.com/SamOphis/lavapotion) (Elixir)
-* [WaveLink](https://github.com/EvieePy/Wavelink)(discord.py, Python)
+* [WaveLink](https://github.com/EvieePy/Wavelink) (discord.py, Python)
+* [Lavalink-rs](https://gitlab.com/nitsuga5124/lavalink-rs/) (Async Libraries, Rust)
 * Or [create your own](https://github.com/Frederikam/Lavalink/blob/master/IMPLEMENTATION.md)
 
 ## Server configuration
