@@ -8,6 +8,15 @@ A [very simple example bot](Testbot) is available.
 
 [![JDA guild](https://discordapp.com/api/guilds/125227483518861312/embed.png?style=banner2)](https://discord.gg/jtAWrzU)
 
+## About this fork
+This fork is a custom fork for DuncteBot that includes the following extra audio source managers:
+- PornHub
+- Reddit
+- clyp.it
+- getyarn.io
+- TTS (Text To Speech, make sure that input starts with `speak:`)
+- TikTok (experimental)
+
 ## Features
 * Powered by Lavaplayer
 * Minimal CPU/memory footprint
