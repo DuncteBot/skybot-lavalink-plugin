@@ -132,12 +132,12 @@ void versionTxt() {
 versionTxt()
 
 githubRelease {
-    token System.getenv("GITHUB_TOKEN")
+    token System.getenv("GITHUB_TOKEN") ?: ""
     owner "duncte123"
     repo "Lavalink"
     tagName version
     overwrite false
     prerelease false
     releaseAssets bootJar.outputs.files
-    body changelog().call()
+    body changelog()
 }
