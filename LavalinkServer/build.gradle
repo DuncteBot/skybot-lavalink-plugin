@@ -1,5 +1,9 @@
 import org.apache.tools.ant.filters.ReplaceTokens
 
+plugins {
+    id "com.github.breadmoirai.github-release" version "2.2.12"
+}
+
 apply plugin: 'application'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'com.gorylenko.gradle-git-properties'
@@ -126,3 +130,14 @@ void versionTxt() {
 }
 
 versionTxt()
+
+githubRelease {
+    token System.getenv("GITHUB_TOKEN")
+    owner "duncte123"
+    repo "Lavalink"
+    tagName version
+    overwrite false
+    prerelease false
+    releaseAssets bootJar.outputs.files
+    body changelog().call()
+}
