@@ -157,7 +157,7 @@ versionTxt()
 
 githubRelease {
     token System.getenv("GITHUB_TOKEN") ?: ""
-    owner "duncte123"
+    owner "DuncteBot"
     repo "Lavalink"
     targetCommitish "dunctebot-custom"
     tagName shortVersionFromTag()
