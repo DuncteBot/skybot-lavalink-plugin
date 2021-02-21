@@ -124,6 +124,30 @@ String versionFromTag() {
     }
 }
 
+@SuppressWarnings("GrMethodMayBeStatic")
+String shortVersionFromTag() {
+
+    def headTag = grgit.tag.list().find {
+        it.commit.getId() == grgit.head().getId()
+    }
+
+    // Uncommitted changes? -> should be SNAPSHOT
+    // Also watch out for false positives in the CI build
+    def clean = grgit.status().clean || System.getenv('CI') != null
+
+    if (!clean) {
+        println("Git state is dirty, setting version as snapshot")
+    }
+
+    if (headTag && clean) {
+        headTag.getName()
+    } else {
+        String head = grgit.head().id
+
+        "${head.substring(0, Math.min(8, head.length()))}-SNAPSHOT"
+    }
+}
+
 //create a simple version file that we will be reading to create appropriate docker tags
 void versionTxt() {
     new File("$projectDir/VERSION.txt").text = "$project.version\n"
@@ -135,7 +159,7 @@ githubRelease {
     token System.getenv("GITHUB_TOKEN") ?: ""
     owner "duncte123"
     repo "Lavalink"
-    tagName version
+    tagName shortVersionFromTag()
     overwrite false
     prerelease false
     releaseAssets bootJar.outputs.files
