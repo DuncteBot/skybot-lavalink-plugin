@@ -161,6 +161,7 @@ githubRelease {
     repo "Lavalink"
     targetCommitish "dunctebot-custom"
     tagName shortVersionFromTag()
+    releaseName shortVersionFromTag()
     overwrite false
     prerelease false
     releaseAssets bootJar.outputs.files
