@@ -40,7 +40,7 @@ bootRun {
 dependencies {
 //    compile group: 'com.dunctebot', name: 'sourcemanagers', version: duncteSourceManagersVersion
     // jitpack version
-    compile group: 'com.github.DuncteBot', name: 'skybot-source-managers', version: '934b458'
+    compile group: 'com.github.DuncteBot', name: 'skybot-source-managers', version: '3cc9772'
 
     compile (group: 'moe.kyokobot.koe', name: 'core', version: koeVersion) {
         // This version of SLF4J does not recognise Logback 1.2.3
