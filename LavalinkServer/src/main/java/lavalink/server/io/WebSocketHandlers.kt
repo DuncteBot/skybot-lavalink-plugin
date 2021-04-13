@@ -32,8 +32,9 @@ class WebSocketHandlers(private val contextMap: Map<String, SocketContext>) {
 
         val player = context.getPlayer(guildId)
         val conn = context.getVoiceConnection(player)
-        conn.connect(VoiceServerInfo(sessionId, endpoint, token))
-        player.provideTo(conn)
+        conn.connect(VoiceServerInfo(sessionId, endpoint, token)).thenRun {
+            player.provideTo(conn)
+        }
     }
 
     fun play(context: SocketContext, json: JSONObject) {
