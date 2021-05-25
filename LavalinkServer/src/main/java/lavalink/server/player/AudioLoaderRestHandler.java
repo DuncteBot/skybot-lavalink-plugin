@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 Frederik Ar. Mikkelsen & NoobLance
+ * Copyright (c) 2021 Freya Arbjerg and contributors
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -72,7 +72,8 @@ public class AudioLoaderRestHandler {
                 .put("uri", trackInfo.uri)
                 .put("isStream", trackInfo.isStream)
                 .put("isSeekable", audioTrack.isSeekable())
-                .put("position", audioTrack.getPosition());
+                .put("position", audioTrack.getPosition())
+                .put("sourceName", audioTrack.getSourceManager() == null ? null : audioTrack.getSourceManager().getSourceName());
     }
 
     private JSONObject encodeLoadResult(LoadResult result) {

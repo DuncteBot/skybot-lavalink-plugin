@@ -1,5 +1,5 @@
 # Implementation guidelines
-How to write your own client. The Java [Lavalink-Client](https://github.com/FredBoat/Lavalink-Client) will serve as an example implementation.
+How to write your own client. The Java [Lavalink-Client](https://github.com/freyacodes/lavalink-client) will serve as an example implementation.
 The Java client has support for JDA, but can also be adapted to work with other JVM libraries.
 
 ## Requirements
@@ -228,7 +228,7 @@ and you can send the same VOICE_SERVER_UPDATE to a new node.
 
 ### Incoming messages
 
-See [LavalinkSocket.java](https://github.com/FredBoat/Lavalink-Client/blob/master/src/main/java/lavalink/client/io/LavalinkSocket.java) for client implementation
+See [LavalinkSocket.java](https://github.com/freyacodes/lavalink-client/blob/master/src/main/java/lavalink/client/io/LavalinkSocket.java) for client implementation
 
 This event includes:
 * Unix timestamp in milliseconds.
@@ -382,7 +382,8 @@ Response:
         "isStream": false,
         "position": 0,
         "title": "Rick Astley - Never Gonna Give You Up",
-        "uri": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        "uri": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "sourceName": "youtube"
       }
     }
   ]
@@ -426,6 +427,65 @@ A severity level of `COMMON` indicates that the error is non-fatal and that the 
 }
 ```
 
+### Track Decoding API
+
+Decode a single track into its info
+```
+GET /decodetrack?track=QAAAjQIAJVJpY2sgQXN0bGV5IC0gTmV2ZXIgR29ubmEgR2l2ZSBZb3UgVXAADlJpY2tBc3RsZXlWRVZPAAAAAAADPCAAC2RRdzR3OVdnWGNRAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9ZFF3NHc5V2dYY1EAB3lvdXR1YmUAAAAAAAAAAA== HTTP/1.1
+Host: localhost:8080
+Authorization: youshallnotpass
+```
+
+Response:
+```json
+{
+  "identifier": "dQw4w9WgXcQ",
+  "isSeekable": true,
+  "author": "RickAstleyVEVO",
+  "length": 212000,
+  "isStream": false,
+  "position": 0,
+  "title": "Rick Astley - Never Gonna Give You Up",
+  "uri": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  "sourceName": "youtube"
+}
+```
+
+Decode multiple tracks into info their info
+```
+POST /decodetracks HTTP/1.1
+Host: localhost:8080
+Authorization: youshallnotpass
+```
+
+Request:
+```json
+[
+   "QAAAjQIAJVJpY2sgQXN0bGV5IC0gTmV2ZXIgR29ubmEgR2l2ZSBZb3UgVXAADlJpY2tBc3RsZXlWRVZPAAAAAAADPCAAC2RRdzR3OVdnWGNRAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9ZFF3NHc5V2dYY1EAB3lvdXR1YmUAAAAAAAAAAA==",
+   ...
+]
+```
+
+Response:
+```json
+[
+    {
+      "track": "QAAAjQIAJVJpY2sgQXN0bGV5IC0gTmV2ZXIgR29ubmEgR2l2ZSBZb3UgVXAADlJpY2tBc3RsZXlWRVZPAAAAAAADPCAAC2RRdzR3OVdnWGNRAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9ZFF3NHc5V2dYY1EAB3lvdXR1YmUAAAAAAAAAAA==",
+      "info": {
+        "identifier": "dQw4w9WgXcQ",
+        "isSeekable": true,
+        "author": "RickAstleyVEVO",
+        "length": 212000,
+        "isStream": false,
+        "position": 0,
+        "title": "Rick Astley - Never Gonna Give You Up",
+        "uri": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "sourceName": "youtube"
+      }
+    },
+    ...
+]
+```
 ---
 
 ### RoutePlanner API

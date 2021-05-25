@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 Frederik Ar. Mikkelsen & NoobLance
+ * Copyright (c) 2021 Freya Arbjerg and contributors
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -125,6 +125,6 @@ object Launcher {
                 }
         )
         sa.run(*args)
-        log.info("You can safely ignore the big red warning about illegal reflection. See https://github.com/Frederikam/Lavalink/issues/295")
+        log.info("You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295")
     }
 }
