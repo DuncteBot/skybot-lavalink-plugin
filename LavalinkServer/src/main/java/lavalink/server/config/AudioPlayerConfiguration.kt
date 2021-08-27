@@ -20,7 +20,6 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import java.net.InetAddress
 import java.util.function.Predicate
-import java.util.function.Supplier
 
 /**
  * Created by napster on 05.03.18.
@@ -69,7 +68,7 @@ class AudioPlayerConfiguration {
         }
         if (sources.isSoundcloud) {
             val dataReader = DefaultSoundCloudDataReader()
-            val htmlDataLoader = DefaultSoundCloudHtmlDataLoader()
+            val htmlDataLoader = DefaultSoundCloudDataLoader()
             val formatHandler = DefaultSoundCloudFormatHandler()
 
             audioPlayerManager.registerSourceManager(SoundCloudAudioSourceManager(
