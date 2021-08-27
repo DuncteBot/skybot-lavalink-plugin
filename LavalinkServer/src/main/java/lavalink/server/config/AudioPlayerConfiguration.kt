@@ -68,7 +68,7 @@ class AudioPlayerConfiguration {
         }
         if (sources.isSoundcloud) {
             val dataReader = DefaultSoundCloudDataReader()
-            val htmlDataLoader = DefaultSoundCloudDataLoader()
+            val htmlDataLoader = DefaultSoundCloudHtmlDataLoader()
             val formatHandler = DefaultSoundCloudFormatHandler()
 
             audioPlayerManager.registerSourceManager(SoundCloudAudioSourceManager(
