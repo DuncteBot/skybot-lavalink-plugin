@@ -65,10 +65,7 @@ class AudioPlayerConfiguration {
             audioPlayerManager.registerSourceManager(youtube)
 
             // Clyp.it, ph, speach and youtube filter override
-            DuncteBotSources.registerCustom(audioPlayerManager,
-                    "en-AU",
-                    1,
-                    true)
+            DuncteBotSources.registerCustom(audioPlayerManager, "en-AU", playlistLoadLimit ?: 1)
         }
         if (sources.isSoundcloud) {
             val dataReader = DefaultSoundCloudDataReader()
