@@ -3,6 +3,31 @@
 Each release usually includes various fixes and improvements.
 The most noteworthy of these, as well as any features and breaking changes, are listed here.
 
+## 3.4
+* New filters system
+* Deprecation of `TrackExceptionEvent.error`, replaced by `TrackExceptionEvent.exception`
+* Added the `connected` boolean to player updates.
+* Updated lavaplayer, fixes Soundcloud
+* Added source name to REST api track objects
+* Clients are now requested to make their name known during handshake
+
+Contributors:
+[@freyacodes](https://github.com/freyacodes),
+[@duncte123](https://github.com/duncte123),
+[@DaliborTrampota](https://github.com/DaliborTrampota),
+[@Mandruyd](https://github.com/Mandruyd),
+[@Allvaa](https://github.com/@Allvaa), and
+[@TopiSenpai](https://github.com/TopiSenpai)
+
+## 3.3.2.5
+* Update Lavaplayer to 1.3.76
+
+## 3.3.2.4
+* Update Lavaplayer to 1.3.74
+
+## 3.3.2.3
+* Update Lavaplayer to 1.3.65, fixes Soundcloud
+
 ## v3.3.2.2
 * Updated Lavaplayer to 1.3.61
 * Fixed a ConcurrentModificationException ([Thewsomeguy](https://github.com/Thewsomeguy))

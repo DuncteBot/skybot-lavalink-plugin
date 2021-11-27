@@ -68,15 +68,15 @@ class AudioPlayerConfiguration {
         }
         if (sources.isSoundcloud) {
             val dataReader = DefaultSoundCloudDataReader()
-            val htmlDataLoader = DefaultSoundCloudHtmlDataLoader()
+            val dataLoader = DefaultSoundCloudDataLoader()
             val formatHandler = DefaultSoundCloudFormatHandler()
 
             audioPlayerManager.registerSourceManager(SoundCloudAudioSourceManager(
                     serverConfig.isSoundcloudSearchEnabled,
                     dataReader,
-                    htmlDataLoader,
+                    dataLoader,
                     formatHandler,
-                    DefaultSoundCloudPlaylistLoader(htmlDataLoader, dataReader, formatHandler)
+                    DefaultSoundCloudPlaylistLoader(dataLoader, dataReader, formatHandler)
             ))
         }
         if (sources.isBandcamp) audioPlayerManager.registerSourceManager(BandcampAudioSourceManager())

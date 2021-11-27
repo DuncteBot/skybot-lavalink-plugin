@@ -11,6 +11,8 @@ The Java client has support for JDA, but can also be adapted to work with other 
 * The `error` string on the `TrackExceptionEvent` has been deprecated and replaced by 
 the `exception` object following the same structure as the `LOAD_FAILED` error on [`/loadtracks`](#rest-api)
 * Added the `connected` boolean to player updates.
+* Added source name to REST api track objects
+* Clients are now requested to make their name known during handshake
 
 ## Significant changes v2.0 -> v3.0 
 * The response of `/loadtracks` has been completely changed (again since the initial v3.0 pre-release).
@@ -404,7 +406,7 @@ Response:
 }
 ```
 
-If the identifier leads to a playlist, `playlistInfo` will contain two properties, `name` and `selectedTrack`
+If the identifier leads to a playlist, `playlistInfo` will contain two properties, `name` and `selectedTrack`(-1 if no selectedTrack found)
 ```json
 {
   "loadType": "PLAYLIST_LOADED",
@@ -649,7 +651,7 @@ queue is then emptied and the events are then replayed.
 ```
 
 # Common pitfalls
-Admidtedly Lavalink isn't inherently the most intuitive thing ever, and people tend to run into the same mistakes over again. Please double check the following if you run into problems developing your client and you can't connect to a voice channel or play audio:
+Admittedly Lavalink isn't inherently the most intuitive thing ever, and people tend to run into the same mistakes over again. Please double check the following if you run into problems developing your client and you can't connect to a voice channel or play audio:
 
 1. Check that you are forwarding sendWS events to **Discord**.
 2. Check that you are intercepting **VOICE_SERVER_UPDATE**s to **Lavalink**. Do not edit the event object from Discord.
