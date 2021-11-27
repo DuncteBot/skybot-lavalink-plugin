@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SERVERS="${ll_fr1_ip} ${ll_ca1_ip} ${ll_fr2_ip} ${ll_ca2_ip}"
+SERVERS="${ll_fr1_ip} ${ll_ca1_ip}"
 
 # load all monitors
 for SERVER in ${SERVERS}; do
