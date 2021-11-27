@@ -50,7 +50,7 @@ dependencies {
     compile group: 'com.github.walkyst', name: 'lavaplayer-fork', version: '1.3.96'
     //compile group: 'com.sedmelluq', name: 'lavaplayer', version: lavaplayerVersion
     // compile(group: 'com.github.Walkyst', name: 'lavaplayer-fork', version: lavaplayerForkVersion
-    compile group: 'com.sedmelluq', name: 'lavaplayer-ext-youtube-rotator', version: lavaplayerIpRotatorVersion) {
+    compile (group: 'com.sedmelluq', name: 'lavaplayer-ext-youtube-rotator', version: lavaplayerIpRotatorVersion) {
         exclude group: 'com.sedmelluq', module: 'lavaplayer'
     }
     compile group: 'com.github.natanbc', name: 'lavadsp', version: lavaDspVersion
