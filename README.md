@@ -1,3 +1,5 @@
+# DEPRECATED: Since lavalink will be getting a plugin system soon this fork will not be updated anymore. However, I will turn it into a plugin to offer the same functionality.
+
 # Lavalink
 Standalone audio sending node based on Lavaplayer and JDA-Audio.
 Allows for sending audio without it ever reaching any of your shards.
