@@ -5,129 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc7be07c-7a34-4a35-a861-e86f4c291794" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__ch_qos_logback_logback_classic_1_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__ch_qos_logback_logback_core_1_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_dunctebot_sourcemanagers_1_5_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_annotations_2_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_databind_2_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_freyacodes_Lavalink_2bd6b22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_walkyst_lavaplayer_fork_1_3_96.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sedmelluq_lava_common_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sedmelluq_lavaplayer_1_3_76.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sedmelluq_lavaplayer_natives_1_3_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sedmelluq_udp_queue_1_1_0_linux64.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_codec_commons_codec_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_io_commons_io_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_sentry_sentry_1_7_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_sentry_sentry_logback_1_7_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__moe_kyokobot_koe_ext_udpqueue_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_iharder_base64_2_3_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_httpcomponents_httpclient_4_5_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_httpcomponents_httpcore_4_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_json_json_20180813.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jsoup_jsoup_1_12_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_api_5_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_engine_5_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_aop_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_beans_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_context_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_core_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_expression_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_jcl_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/LavalinkServer/Lavalink-Parent.Lavalink-Server.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/Testbot/Lavalink-Parent.Testbot.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/lavalink-plugin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/lavalink-plugin.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/lavalink-plugin.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dunctebot/lavalinkplugin/Plugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dunctebot/lavalinkplugin/SourceInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/release.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/release.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMPLEMENTATION.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/application.yml.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/docker/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/docker/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/Launcher.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/AudioPlayerConfiguration.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/AudioSourcesConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/KoeConfiguration.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/MetricsPrometheusConfigProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/RateLimitConfig.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/RequestAuthorizationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/SentryConfigProperties.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/SentryConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/ServerConfig.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/WebsocketConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/info/AppInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/info/GitRepoState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/info/InfoRestHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/io/HandshakeInterceptorImpl.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/io/ResponseHeaderFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/io/RoutePlannerRestHandler.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/io/SocketContext.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/io/SocketServer.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/io/StatsTask.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/io/WSCodes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/io/WebSocketHandlers.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/metrics/GcNotificationListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/metrics/PrometheusMetrics.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/metrics/PrometheusMetricsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/AudioLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/AudioLoaderRestHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/AudioLossCounter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/EventEmitter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/LoadResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/Player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/ResultStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/TrackEndMarkerHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/filters/FilterChain.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/filters/filterConfigs.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/util/ResetableCountDownLatch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/util/Util.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/resources/app.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/test/java/lavalink/server/config/RequestAuthorizationFilterTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/test/resources/application-test.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ROUTEPLANNERS.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testbot/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testbot/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testbot/src/main/kotlin/lavalink/testbot/testbot.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testbot/src/main/resources/logback.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/update_servers.sh" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/jitpack.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sedmelluq_udp_queue_1_1_0_linux64.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/lavalink-plugin.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/lavalink-plugin.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/lavalink-plugin.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/lavalink-plugin.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,13 +62,6 @@
                 <item name="lavalink-plugin" type="f1a62948:ProjectNode" />
                 <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
                 <item name="runtimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="lavalink-plugin" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="runtimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-                <item name="com.github.freyacodes:Lavalink:2bd6b22" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
               </path>
             </expand>
             <select />
@@ -499,7 +375,7 @@
       <workItem from="1630048800953" duration="1192000" />
       <workItem from="1630050421020" duration="271000" />
       <workItem from="1638016373539" duration="1271000" />
-      <workItem from="1638700566199" duration="3715000" />
+      <workItem from="1638700566199" duration="4425000" />
     </task>
     <servers />
   </component>

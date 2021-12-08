@@ -1,5 +1,7 @@
 plugins {
     java
+    `maven-publish`
+    id("com.github.johnrengelman.shadow") version "7.0.0"
 }
 
 configure<JavaPluginExtension> {
@@ -20,11 +22,18 @@ repositories {
 
 dependencies {
     implementation("com.dunctebot:sourcemanagers:1.5.6")
-    implementation("com.github.freyacodes:Lavalink:2bd6b22")
+
+    compileOnly("com.github.freyacodes:Lavalink:2bd6b22")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 }
 
 tasks.getByName<Test>("test") {
     useJUnitPlatform()
+}
+
+tasks {
+    shadowJar {
+        archiveClassifier.set("")
+    }
 }
