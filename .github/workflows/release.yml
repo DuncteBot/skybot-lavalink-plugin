@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - dunctebot-custom
+      - not-dunctebot-custom
 
 jobs:
   build:

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Lavalink-Server" external.linked.project.path="$MODULE_DIR$/../../../LavalinkServer" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="lavalink" external.system.module.version="8402e1981fb6ef6b12803a1830f04e45a8a29d52-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../LavalinkServer">
+      <excludeFolder url="file://$MODULE_DIR$/../../../LavalinkServer/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../LavalinkServer/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

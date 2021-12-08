@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.sedmelluq:lava-common:1.1.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sedmelluq/lava-common/1.1.2/c9e2c5192a93847edd6b96c2f93530fdcda85028/lava-common-1.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sedmelluq/lava-common/1.1.2/79f3c867e4dbc3e9cec2c082e2fbf8f2e5e7114e/lava-common-1.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

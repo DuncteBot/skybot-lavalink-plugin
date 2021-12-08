@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="11">
+      <module name="Lavalink-Client_main" target="1.8" />
+      <module name="Lavalink-Client_test" target="1.8" />
+      <module name="Lavalink-Parent.Testbot" target="15" />
+      <module name="Lavalink-Parent.Testbot.main" target="15" />
+      <module name="Lavalink-Parent.Testbot.test" target="15" />
+      <module name="Lavalink-Server_main" target="1.8" />
+      <module name="Lavalink-Server_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

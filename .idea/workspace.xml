@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dc7be07c-7a34-4a35-a861-e86f4c291794" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__ch_qos_logback_logback_classic_1_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__ch_qos_logback_logback_core_1_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_dunctebot_sourcemanagers_1_5_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_annotations_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_databind_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_freyacodes_Lavalink_2bd6b22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_walkyst_lavaplayer_fork_1_3_96.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sedmelluq_lava_common_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sedmelluq_lavaplayer_1_3_76.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sedmelluq_lavaplayer_natives_1_3_14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sedmelluq_udp_queue_1_1_0_linux64.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_codec_commons_codec_1_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_io_commons_io_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_logging_commons_logging_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_sentry_sentry_1_7_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_sentry_sentry_logback_1_7_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__moe_kyokobot_koe_ext_udpqueue_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_iharder_base64_2_3_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_httpcomponents_httpclient_4_5_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_httpcomponents_httpcore_4_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_json_json_20180813.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jsoup_jsoup_1_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_api_5_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_engine_5_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_aop_5_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_beans_5_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_context_5_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_core_5_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_expression_5_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_jcl_5_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/LavalinkServer/Lavalink-Parent.Lavalink-Server.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Testbot/Lavalink-Parent.Testbot.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/lavalink-plugin.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/lavalink-plugin.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/lavalink-plugin.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dunctebot/lavalinkplugin/Plugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dunctebot/lavalinkplugin/SourceInjector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/release.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/release.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMPLEMENTATION.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/application.yml.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/docker/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/docker/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/Launcher.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/AudioPlayerConfiguration.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/AudioSourcesConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/KoeConfiguration.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/MetricsPrometheusConfigProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/RateLimitConfig.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/RequestAuthorizationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/SentryConfigProperties.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/SentryConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/ServerConfig.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/config/WebsocketConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/info/AppInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/info/GitRepoState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/info/InfoRestHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/io/HandshakeInterceptorImpl.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/io/ResponseHeaderFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/io/RoutePlannerRestHandler.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/io/SocketContext.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/io/SocketServer.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/io/StatsTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/io/WSCodes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/io/WebSocketHandlers.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/metrics/GcNotificationListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/metrics/PrometheusMetrics.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/metrics/PrometheusMetricsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/AudioLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/AudioLoaderRestHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/AudioLossCounter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/EventEmitter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/LoadResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/ResultStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/TrackEndMarkerHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/filters/FilterChain.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/player/filters/filterConfigs.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/util/ResetableCountDownLatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/java/lavalink/server/util/Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/resources/app.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/test/java/lavalink/server/config/RequestAuthorizationFilterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LavalinkServer/src/test/resources/application-test.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ROUTEPLANNERS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testbot/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testbot/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testbot/src/main/kotlin/lavalink/testbot/testbot.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testbot/src/main/resources/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/update_servers.sh" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/LavalinkServer">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lavalink-plugin" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lavalink-plugin" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lavalink-plugin" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="runtimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lavalink-plugin" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="runtimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+                <item name="com.github.freyacodes:Lavalink:2bd6b22" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dunctebot-changes" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="ProjectId" id="1P35820qu45ETyVIETvaNeY84TP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/java/Lavalink/LavalinkServer/src/main/java/lavalink/server/config/AudioPlayerConfiguration.java" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.43039444" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\java\Lavalink\LavalinkServer\src\main\java\ml\duncte123\skybot\objects\audioManagers\clypit" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.Lavalink [build]">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Twisted Trial">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lavalink [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Lavalink [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LavalinkApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Lavalink-Parent.Lavalink-Server.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="lavalink.server.LavalinkApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Lavalink [build]" />
+        <item itemvalue="Gradle.Lavalink [bootJar]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc7be07c-7a34-4a35-a861-e86f4c291794" name="Default Changelist" comment="" />
+      <created>1532333220650</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1532333220650</updated>
+      <workItem from="1532333225965" duration="575000" />
+      <workItem from="1532438448287" duration="1280000" />
+      <workItem from="1533028255509" duration="728000" />
+      <workItem from="1533029719099" duration="821000" />
+      <workItem from="1536770658943" duration="402000" />
+      <workItem from="1565089803115" duration="36000" />
+      <workItem from="1565090661853" duration="1145000" />
+      <workItem from="1565105928523" duration="2253000" />
+      <workItem from="1565339001338" duration="1072000" />
+      <workItem from="1565340476530" duration="1284000" />
+      <workItem from="1566317134108" duration="2020000" />
+      <workItem from="1566329224273" duration="78000" />
+      <workItem from="1575800961660" duration="1126000" />
+      <workItem from="1575802107212" duration="756000" />
+      <workItem from="1582807188099" duration="1790000" />
+      <workItem from="1582811424722" duration="43000" />
+      <workItem from="1584960676096" duration="1589000" />
+      <workItem from="1584963654924" duration="639000" />
+      <workItem from="1585034019638" duration="2649000" />
+      <workItem from="1585233481800" duration="1115000" />
+      <workItem from="1586240908817" duration="906000" />
+      <workItem from="1586759463199" duration="2160000" />
+      <workItem from="1587890315852" duration="2048000" />
+      <workItem from="1587968678051" duration="599000" />
+      <workItem from="1588096761466" duration="42000" />
+      <workItem from="1589206528082" duration="1340000" />
+      <workItem from="1589216488824" duration="1252000" />
+      <workItem from="1589228722902" duration="1379000" />
+      <workItem from="1589441460309" duration="889000" />
+      <workItem from="1589638480829" duration="779000" />
+      <workItem from="1590737181058" duration="1393000" />
+      <workItem from="1593263806946" duration="1007000" />
+      <workItem from="1593413986743" duration="338000" />
+      <workItem from="1599127210196" duration="216000" />
+      <workItem from="1600841821659" duration="2208000" />
+      <workItem from="1600845119861" duration="177000" />
+      <workItem from="1601023381740" duration="2169000" />
+      <workItem from="1602429590068" duration="5694000" />
+      <workItem from="1602662954847" duration="292000" />
+      <workItem from="1603006228470" duration="674000" />
+      <workItem from="1603616398728" duration="3691000" />
+      <workItem from="1604135118063" duration="1428000" />
+      <workItem from="1604656702733" duration="1120000" />
+      <workItem from="1606046811862" duration="2125000" />
+      <workItem from="1606131320653" duration="3015000" />
+      <workItem from="1606989899870" duration="985000" />
+      <workItem from="1606993064207" duration="3451000" />
+      <workItem from="1607250630385" duration="681000" />
+      <workItem from="1609069495244" duration="2130000" />
+      <workItem from="1612861359991" duration="7178000" />
+      <workItem from="1612942547609" duration="53000" />
+      <workItem from="1612946973724" duration="711000" />
+      <workItem from="1612952398141" duration="780000" />
+      <workItem from="1613733660449" duration="21705000" />
+      <workItem from="1614703990190" duration="1550000" />
+      <workItem from="1617376604122" duration="2689000" />
+      <workItem from="1617482059420" duration="5701000" />
+      <workItem from="1617565111435" duration="1315000" />
+      <workItem from="1618147567174" duration="2419000" />
+      <workItem from="1619791691960" duration="1067000" />
+      <workItem from="1621935384648" duration="740000" />
+      <workItem from="1624962331038" duration="796000" />
+      <workItem from="1625043221687" duration="1917000" />
+      <workItem from="1625060608246" duration="50000" />
+      <workItem from="1630048800953" duration="1192000" />
+      <workItem from="1630050421020" duration="271000" />
+      <workItem from="1638016373539" duration="1271000" />
+      <workItem from="1638700566199" duration="3715000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="dunctebot-custom" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
