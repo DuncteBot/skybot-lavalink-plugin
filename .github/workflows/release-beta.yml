@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - master
+      - plugin
 
 jobs:
   build:
@@ -25,4 +25,5 @@ jobs:
       - name: Release to github
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PRERELEASE: true
         run: ./gradlew --no-daemon githubRelease

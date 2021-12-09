@@ -2,7 +2,8 @@ plugins {
     java
     `java-library`
     `maven-publish`
-    id("com.github.johnrengelman.shadow") version "7.0.0"
+    id("com.github.johnrengelman.shadow") version "7.1.0"
+    id("com.github.breadmoirai.github-release") version "2.2.12"
 }
 
 configure<JavaPluginExtension> {
@@ -104,4 +105,14 @@ tasks {
 
 data class Version(val major: Int, val minor: Int, val patch: Int) {
     override fun toString() = "$major.$minor.$patch"
+}
+
+githubRelease {
+    token(System.getenv("GITHUB_TOKEN"))
+    owner("DuncteBot")
+    repo("lavalink")
+    tagName(pluginVersion.toString())
+    overwrite(false)
+    prerelease(System.getenv("PRERELEASE") == "true")
+    body(changelog())
 }
