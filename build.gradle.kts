@@ -75,8 +75,15 @@ tasks {
 
         dependsOn(generateJavaSources)
     }
+    jar {
+        archiveBaseName.set("dunctebot-plugin")
+    }
     shadowJar {
+        archiveBaseName.set("dunctebot-plugin")
         archiveClassifier.set("")
+    }
+    build {
+        dependsOn(shadowJar)
     }
 }
 
