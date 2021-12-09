@@ -70,6 +70,8 @@ tasks {
     shadowJar {
         archiveBaseName.set("dunctebot-plugin")
         archiveClassifier.set("")
+
+        into("lavalink-plugin")
     }
     build {
         dependsOn(processResources)
