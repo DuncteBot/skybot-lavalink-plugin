@@ -113,6 +113,7 @@ githubRelease {
     token(System.getenv("GITHUB_TOKEN"))
     owner("DuncteBot")
     repo("lavalink")
+    targetCommitish(System.getenv("RELEASE_TARGET"))
     tagName("$pluginVersion${if(preRelease) "_${System.getenv("GITHUB_RUN_NUMBER")}" else ""}")
     overwrite(false)
     prerelease(preRelease)
