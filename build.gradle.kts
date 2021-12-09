@@ -26,7 +26,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.dunctebot:sourcemanagers:1.5.6")
+    implementation("com.dunctebot:sourcemanagers:1.5.7")
 
     compileOnly("com.github.freyacodes:Lavalink:2bd6b22")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
