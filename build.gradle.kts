@@ -36,18 +36,6 @@ tasks.getByName<Test>("test") {
     useJUnitPlatform()
 }
 
-/*
-    @Override
-    public int getMinor() {
-        return ${pluginVersion.minor};
-    }
-
-    @Override
-    public int getPatch() {
-        return ${pluginVersion.patch};
-    }
-*/
-
 val sourcesForRelease = task<Copy>("sourcesForRelease") {
     from("src/main/java") {
         include("**/Plugin.java")
