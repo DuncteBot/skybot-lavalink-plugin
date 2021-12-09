@@ -69,6 +69,18 @@ val generateJavaSources = task<SourceTask>("generateJavaSources") {
     dependsOn(sourcesForRelease)
 }
 
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.dunctebot"
+            artifactId = "lavalink-plugin"
+            version = "$pluginVersion"
+
+            from(components["java"])
+        }
+    }
+}
+
 tasks {
     compileJava {
         source = generateJavaSources.source
