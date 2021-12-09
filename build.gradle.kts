@@ -1,5 +1,6 @@
 plugins {
     java
+    `java-library`
     `maven-publish`
     id("com.github.johnrengelman.shadow") version "7.0.0"
 }
@@ -9,8 +10,11 @@ configure<JavaPluginExtension> {
     targetCompatibility = JavaVersion.VERSION_11
 }
 
+val pluginVersion = Version(0, 0, 1)
+
 group = "com.dunctebot"
-version = "1.0-SNAPSHOT"
+version = "$pluginVersion"
+// val archivesBaseName = "dunctebot-lavalink"
 
 repositories {
     mavenCentral()
@@ -32,8 +36,62 @@ tasks.getByName<Test>("test") {
     useJUnitPlatform()
 }
 
+/*
+    @Override
+    public int getMinor() {
+        return ${pluginVersion.minor};
+    }
+
+    @Override
+    public int getPatch() {
+        return ${pluginVersion.patch};
+    }
+*/
+
+val sourcesForRelease = task<Copy>("sourcesForRelease") {
+    from("src/main/java") {
+        include("**/Plugin.java")
+        filter {
+            it.replace(
+            "0xFF1",
+            "${pluginVersion.major}"
+            )
+            .replace(
+                "0xFF2",
+                "${pluginVersion.minor}")
+            .replace(
+                "0xFF3",
+                "${pluginVersion.patch}"
+            )
+        }
+    }
+
+    into("build/filteredSrc")
+
+    includeEmptyDirs = false
+}
+
+val generateJavaSources = task<SourceTask>("generateJavaSources") {
+    val javaSources = sourceSets["main"].allJava.filter {
+        !arrayOf("Plugin.java").contains(it.name)
+    }.asFileTree
+
+    source = javaSources + fileTree(sourcesForRelease.destinationDir)
+
+    dependsOn(sourcesForRelease)
+}
+
 tasks {
+    compileJava {
+        source = generateJavaSources.source
+
+        dependsOn(generateJavaSources)
+    }
     shadowJar {
         archiveClassifier.set("")
     }
+}
+
+data class Version(val major: Int, val minor: Int, val patch: Int) {
+    override fun toString() = "$major.$minor.$patch"
 }
