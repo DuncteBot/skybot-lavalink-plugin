@@ -37,39 +37,6 @@ tasks.getByName<Test>("test") {
     useJUnitPlatform()
 }
 
-val sourcesForRelease = task<Copy>("sourcesForRelease") {
-    from("src/main/java") {
-        include("**/Plugin.java")
-        filter {
-            it.replace(
-            "0xFF1",
-            "${pluginVersion.major}"
-            )
-            .replace(
-                "0xFF2",
-                "${pluginVersion.minor}")
-            .replace(
-                "0xFF3",
-                "${pluginVersion.patch}"
-            )
-        }
-    }
-
-    into("build/filteredSrc")
-
-    includeEmptyDirs = false
-}
-
-val generateJavaSources = task<SourceTask>("generateJavaSources") {
-    val javaSources = sourceSets["main"].allJava.filter {
-        !arrayOf("Plugin.java").contains(it.name)
-    }.asFileTree
-
-    source = javaSources + fileTree(sourcesForRelease.destinationDir)
-
-    dependsOn(sourcesForRelease)
-}
-
 publishing {
     publications {
         create<MavenPublication>("maven") {
@@ -83,10 +50,19 @@ publishing {
 }
 
 tasks {
-    compileJava {
-        source = generateJavaSources.source
+    processResources {
+        from("src/main/resources") {
+            include("plugin.properties")
+            filter {
+                it.replace(
+                    "@version@",
+                    "$pluginVersion"
+                )
+            }
+        }
 
-        dependsOn(generateJavaSources)
+        into("build/resources/main")
+        duplicatesStrategy = DuplicatesStrategy.INCLUDE
     }
     jar {
         archiveBaseName.set("dunctebot-plugin")
@@ -96,6 +72,8 @@ tasks {
         archiveClassifier.set("")
     }
     build {
+        dependsOn(processResources)
+        dependsOn(compileJava)
         dependsOn(shadowJar)
     }
     publish {

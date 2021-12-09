@@ -8,8 +8,10 @@ import com.dunctebot.sourcemanagers.reddit.RedditAudioSourceManager;
 import com.dunctebot.sourcemanagers.speech.SpeechAudioSourceManager;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import lavalink.api.AudioPlayerManagerConfiguration;
+import org.springframework.stereotype.Component;
 
 // TODO: better name
+@Component
 public class SourceInjector implements AudioPlayerManagerConfiguration {
     @Override
     public AudioPlayerManager configure(AudioPlayerManager manager) {
