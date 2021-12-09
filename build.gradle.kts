@@ -107,12 +107,14 @@ data class Version(val major: Int, val minor: Int, val patch: Int) {
     override fun toString() = "$major.$minor.$patch"
 }
 
+val preRelease = System.getenv("PRERELEASE") == "true"
+
 githubRelease {
     token(System.getenv("GITHUB_TOKEN"))
     owner("DuncteBot")
     repo("lavalink")
-    tagName(pluginVersion.toString())
+    tagName("$pluginVersion${if(preRelease) "_${System.getenv("GITHUB_RUN_NUMBER")}" else ""}")
     overwrite(false)
-    prerelease(System.getenv("PRERELEASE") == "true")
+    prerelease(preRelease)
     body(changelog())
 }
