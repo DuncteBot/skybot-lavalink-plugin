@@ -108,13 +108,15 @@ data class Version(val major: Int, val minor: Int, val patch: Int) {
 }
 
 val preRelease = System.getenv("PRERELEASE") == "true"
+val verName = "$pluginVersion${if(preRelease) "_${System.getenv("GITHUB_RUN_NUMBER")}" else ""}"
 
 githubRelease {
     token(System.getenv("GITHUB_TOKEN"))
     owner("DuncteBot")
     repo("lavalink")
     targetCommitish(System.getenv("RELEASE_TARGET"))
-    tagName("$pluginVersion${if(preRelease) "_${System.getenv("GITHUB_RUN_NUMBER")}" else ""}")
+    tagName(verName)
+    releaseName(verName)
     overwrite(false)
     prerelease(preRelease)
     body(changelog())
