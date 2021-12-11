@@ -12,6 +12,7 @@ A [very simple example bot](Testbot) is available.
 
 ## About this fork
 This fork is a custom fork for DuncteBot that includes the following extra audio source managers:
+- OC ReMix (ocremix.org)
 - PornHub
 - Reddit
 - clyp.it
