@@ -1,13 +1,12 @@
 package com.dunctebot.lavalinkplugin;
 
-import com.dunctebot.sourcemanagers.DuncteBotSources;
 import com.dunctebot.sourcemanagers.clypit.ClypitAudioSourceManager;
 import com.dunctebot.sourcemanagers.getyarn.GetyarnAudioSourceManager;
 import com.dunctebot.sourcemanagers.pornhub.PornHubAudioSourceManager;
 import com.dunctebot.sourcemanagers.reddit.RedditAudioSourceManager;
 import com.dunctebot.sourcemanagers.speech.SpeechAudioSourceManager;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
-import lavalink.api.AudioPlayerManagerConfiguration;
+import dev.arbjerg.lavalink.api.AudioPlayerManagerConfiguration;
 import org.springframework.stereotype.Component;
 
 // TODO: better name

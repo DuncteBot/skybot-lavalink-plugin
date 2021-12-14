@@ -22,15 +22,15 @@ repositories {
     maven("https://duncte123.jfrog.io/artifactory/maven")
     maven("https://m2.dv8tion.net/releases")
     maven("https://jitpack.io")
-    jcenter() //koe :(
+    // jcenter() //koe :(
 }
 
 dependencies {
     implementation("com.dunctebot:sourcemanagers:1.5.7")
 
-    compileOnly("com.github.freyacodes:Lavalink:2bd6b22")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+    compileOnly("dev.arbjerg.lavalink:plugin-api:0.2.0")
+    // testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
+    // testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 }
 
 tasks.getByName<Test>("test") {
