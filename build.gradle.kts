@@ -1,36 +1,42 @@
 plugins {
     java
+    application
     `java-library`
     `maven-publish`
     id("com.github.johnrengelman.shadow") version "7.1.0"
     id("com.github.breadmoirai.github-release") version "2.2.12"
 }
 
-configure<JavaPluginExtension> {
+java {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
 }
 
-val pluginVersion = Version(0, 0, 1)
+application {
+    mainClass.set("org.springframework.boot.loader.JarLauncher")
+}
+
+val pluginVersion = Version(1, 0, 0)
 
 group = "com.dunctebot"
 version = "$pluginVersion"
-// val archivesBaseName = "dunctebot-lavalink"
+val archivesBaseName = "dunctebot-plugin"
 
 repositories {
     mavenCentral()
     maven("https://duncte123.jfrog.io/artifactory/maven")
     maven("https://m2.dv8tion.net/releases")
     maven("https://jitpack.io")
-    // jcenter() //koe :(
+    jcenter() //koe :(
 }
 
 dependencies {
-    implementation("com.dunctebot:sourcemanagers:1.5.7")
+    implementation("com.dunctebot:sourcemanagers:1.5.9")
 
-    compileOnly("dev.arbjerg.lavalink:plugin-api:0.2.0")
-    // testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
-    // testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+    compileOnly("dev.arbjerg.lavalink:plugin-api:0.6.0")
+
+    // for testing
+    runtimeOnly("com.github.freyacodes.lavalink:Lavalink-Server:feature~plugins-SNAPSHOT")
 }
 
 tasks.getByName<Test>("test") {
@@ -52,7 +58,7 @@ publishing {
 tasks {
     processResources {
         from("src/main/resources") {
-            include("plugin.properties")
+            include("**/dunctebot.properties")
             filter {
                 it.replace(
                     "@version@",
@@ -65,13 +71,11 @@ tasks {
         duplicatesStrategy = DuplicatesStrategy.INCLUDE
     }
     jar {
-        archiveBaseName.set("dunctebot-plugin")
+        archiveBaseName.set(archivesBaseName)
     }
     shadowJar {
-        archiveBaseName.set("dunctebot-plugin")
+        archiveBaseName.set(archivesBaseName)
         archiveClassifier.set("")
-
-        into("lavalink-plugin")
     }
     build {
         dependsOn(processResources)
@@ -80,6 +84,10 @@ tasks {
     }
     publish {
         dependsOn(publishToMavenLocal)
+    }
+    wrapper {
+        gradleVersion = "7.1"
+        distributionType = Wrapper.DistributionType.ALL
     }
 }
 
