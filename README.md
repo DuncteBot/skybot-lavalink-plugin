@@ -17,7 +17,7 @@ Latest version: ![GitHub release (latest SemVer including pre-releases)](https:/
 Add the following to your lavalink configuration, make sure to replace `VERSION` with the latest version listed above
 ```yml
 plugins:
-  - dependency: "com.github.dunctebot:lavalink:VERSION"
+  - dependency: "com.dunctebot:lavalink:VERSION"
     repository: "https://jitpack.io"
 ```
 
