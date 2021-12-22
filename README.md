@@ -1,8 +1,8 @@
 # DuncteBot lavalink plugin
 
 Adding support for the following sources:
-- ocremix.org (wip)
-- spotify (wip) (youtube loading)
+- ocremix.org
+- spotify (not implemented) (via youtube loading)
 - Clyp.it
 - Reddit
 - getyarn.io
