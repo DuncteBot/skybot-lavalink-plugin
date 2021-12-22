@@ -3,7 +3,7 @@ plugins {
     application
     `java-library`
     `maven-publish`
-    id("com.github.johnrengelman.shadow") version "7.1.0"
+    id("com.github.johnrengelman.shadow") version "7.1.1"
     id("com.github.breadmoirai.github-release") version "2.2.12"
 }
 
@@ -36,7 +36,7 @@ dependencies {
     compileOnly("dev.arbjerg.lavalink:plugin-api:0.6.0")
 
     // for testing
-    // runtimeOnly("com.github.freyacodes.lavalink:Lavalink-Server:feature~plugins-SNAPSHOT")
+    runtimeOnly("com.github.freyacodes.lavalink:Lavalink-Server:feature~plugins-SNAPSHOT")
 }
 
 tasks.getByName<Test>("test") {
@@ -46,7 +46,7 @@ tasks.getByName<Test>("test") {
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            groupId = "com.github.dunctebot"
+            groupId = "com.dunctebot"
             artifactId = "lavalink"
             version = "$pluginVersion"
 
@@ -54,6 +54,10 @@ publishing {
         }
     }
 }
+
+// make sure that we can resolve the dependencies
+val impl = project.configurations.implementation.get()
+impl.isCanBeResolved = true
 
 tasks {
     processResources {
@@ -76,12 +80,15 @@ tasks {
     shadowJar {
         archiveBaseName.set(archivesBaseName)
         archiveClassifier.set("")
+
+        configurations = listOf(impl)
     }
     build {
         dependsOn(processResources)
         dependsOn(compileJava)
         dependsOn(shadowJar)
     }
+
     publish {
         dependsOn(publishToMavenLocal)
     }
