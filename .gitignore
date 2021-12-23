@@ -11,5 +11,6 @@ build/*
 .project
 .classpath
 .settings
-/Testbot/build/
-/Testbot/out/
+build/
+out/
+VERSION.txt
