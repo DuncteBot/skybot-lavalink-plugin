@@ -27,4 +27,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # just use master
           RELEASE_TARGET: master
-        run: ./gradlew --no-daemon githubRelease
+        run: ./gradlew --no-daemon build githubRelease
