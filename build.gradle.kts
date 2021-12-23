@@ -33,7 +33,7 @@ repositories {
 dependencies {
     implementation("com.dunctebot:sourcemanagers:1.5.9")
 
-    compileOnly("dev.arbjerg.lavalink:plugin-api:0.6.0")
+    compileOnly("dev.arbjerg.lavalink:plugin-api:0.8.0")
 
     // for testing
     runtimeOnly("com.github.freyacodes.lavalink:Lavalink-Server:feature~plugins-SNAPSHOT")
