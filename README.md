@@ -22,6 +22,8 @@ lavalink:
         repository: "https://jitpack.io"
 ```
 
+Alternatively you can download the jar from the release on github and place that in your plugins folder
+
 # Configuration
 The plugin exposes these configuration options
 <br><b>NOTE:</b> this plugins block is a root level object, don't place it where you import the plugin

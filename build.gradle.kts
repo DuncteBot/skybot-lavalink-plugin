@@ -16,7 +16,7 @@ application {
     mainClass.set("org.springframework.boot.loader.JarLauncher")
 }
 
-val pluginVersion = Version(1, 1, 0)
+val pluginVersion = Version(1, 1, 1)
 
 group = "com.dunctebot"
 version = "$pluginVersion"
@@ -110,6 +110,7 @@ githubRelease {
     owner("DuncteBot")
     repo("lavalink")
     targetCommitish(System.getenv("RELEASE_TARGET"))
+    releaseAssets(tasks.shadowJar.get().outputs.files.toList())
     tagName(verName)
     releaseName(verName)
     overwrite(false)
