@@ -16,7 +16,7 @@ application {
     mainClass.set("org.springframework.boot.loader.JarLauncher")
 }
 
-val pluginVersion = Version(1, 0, 0)
+val pluginVersion = Version(1, 0, 1)
 
 group = "com.dunctebot"
 version = "$pluginVersion"
@@ -33,7 +33,7 @@ repositories {
 dependencies {
     implementation("com.dunctebot:sourcemanagers:1.5.9")
 
-    compileOnly("dev.arbjerg.lavalink:plugin-api:0.8.0")
+    compileOnly("dev.arbjerg.lavalink:plugin-api:0.8.1")
 
     // for testing
     runtimeOnly("com.github.freyacodes.lavalink:Lavalink-Server:feature~plugins-SNAPSHOT")

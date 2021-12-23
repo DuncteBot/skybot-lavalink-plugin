@@ -12,7 +12,7 @@ Adding support for the following sources:
 
 # Adding to lavalink
 
-Latest version: ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/DuncteBot/lavalink?include_prereleases)
+Latest version: ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/DuncteBot/lavalink)
 
 Add the following to your lavalink configuration, make sure to replace `VERSION` with the latest version listed above
 ```yml
