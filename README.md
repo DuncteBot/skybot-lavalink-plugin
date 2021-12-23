@@ -16,24 +16,25 @@ Latest version: ![GitHub release (latest SemVer including pre-releases)](https:/
 
 Add the following to your lavalink configuration, make sure to replace `VERSION` with the latest version listed above
 ```yml
-plugins:
-  - dependency: "com.dunctebot:lavalink:VERSION"
-    repository: "https://jitpack.io"
+lavalink:
+    plugins:
+        - dependency: "com.dunctebot:lavalink:VERSION"
+        repository: "https://jitpack.io"
 ```
 
 # Configuration
 The plugin exposes these configuration options
+<br><b>NOTE:</b> this plugins block is a root level object, don't place it where you import the plugin
 ```yml
-lavalink:
-  plugins:
+plugins:
     dunctebot:
-      ttsLanguage: "en-AU" # language of the TTS engine
-      sources:
-        # true = source enabled, false = source disabled
-        getyarn: true # www.getyarn.io
-        clypit: true # www.clyp.it
-        tts: true # tts:Words to speak
-        pornhub: true # should be self-explanatory
-        reddit: true # should be self-explanatory
-        ocremix: true # www.ocremix.org
+        ttsLanguage: "en-AU" # language of the TTS engine
+        sources:
+            # true = source enabled, false = source disabled
+            getyarn: true # www.getyarn.io
+            clypit: true # www.clyp.it
+            tts: true # tts:Words to speak
+            pornhub: true # should be self-explanatory
+            reddit: true # should be self-explanatory
+            ocremix: true # www.ocremix.org
 ```

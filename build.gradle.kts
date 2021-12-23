@@ -16,7 +16,7 @@ application {
     mainClass.set("org.springframework.boot.loader.JarLauncher")
 }
 
-val pluginVersion = Version(1, 0, 1)
+val pluginVersion = Version(1, 1, 0)
 
 group = "com.dunctebot"
 version = "$pluginVersion"

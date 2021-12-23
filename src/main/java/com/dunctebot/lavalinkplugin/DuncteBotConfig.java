@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix = "lavalink.plugins.dunctebot")
+@ConfigurationProperties(prefix = "plugins.dunctebot")
 public class DuncteBotConfig {
     private String ttsLanguage = "en-AU";
 
@@ -17,7 +17,7 @@ public class DuncteBotConfig {
     }
 
     @Component
-    @ConfigurationProperties(prefix = "lavalink.plugins.dunctebot.sources")
+    @ConfigurationProperties(prefix = "plugins.dunctebot.sources")
     public static class Sources {
         private boolean getyarn = true;
         private boolean clypit = true;
