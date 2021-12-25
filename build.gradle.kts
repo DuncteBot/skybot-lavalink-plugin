@@ -20,7 +20,7 @@ val pluginVersion = Version(1, 1, 1)
 
 group = "com.dunctebot"
 version = "$pluginVersion"
-val archivesBaseName = "dunctebot-plugin"
+val archivesBaseName = "skybot-lavalink-plugin"
 
 repositories {
     mavenCentral()
@@ -47,7 +47,7 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             groupId = "com.dunctebot"
-            artifactId = "lavalink"
+            artifactId = archivesBaseName
             version = "$pluginVersion"
 
             from(components["java"])
