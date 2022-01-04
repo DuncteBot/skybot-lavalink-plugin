@@ -36,7 +36,7 @@ dependencies {
     compileOnly("dev.arbjerg.lavalink:plugin-api:0.9.0")
 
     // for testing
-    runtimeOnly("com.github.freyacodes.lavalink:Lavalink-Server:feature~plugins-SNAPSHOT")
+    runtimeOnly("com.github.freyacodes.lavalink:Lavalink-Server:dev-SNAPSHOT")
 }
 
 tasks.getByName<Test>("test") {
