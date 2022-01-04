@@ -19,7 +19,7 @@ Add the following to your lavalink configuration, make sure to replace `VERSION`
 lavalink:
     plugins:
         - dependency: "com.dunctebot:skybot-lavalink-plugin:VERSION"
-        repository: "https://jitpack.io"
+          repository: "https://jitpack.io"
 ```
 
 Alternatively you can download the jar from the release on github and place that in your plugins folder
