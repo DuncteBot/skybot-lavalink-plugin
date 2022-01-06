@@ -1,4 +1,4 @@
 jdk:
   - openjdk11
 install:
-  - "./gradlew clean build publish"
+  - "./gradlew clean build publish -x jar"
