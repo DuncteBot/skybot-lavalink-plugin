@@ -35,7 +35,7 @@ plugins:
             # true = source enabled, false = source disabled
             getyarn: true # www.getyarn.io
             clypit: true # www.clyp.it
-            tts: true # tts:Words to speak
+            tts: true # speak:Words to speak
             pornhub: true # should be self-explanatory
             reddit: true # should be self-explanatory
             ocremix: true # www.ocremix.org

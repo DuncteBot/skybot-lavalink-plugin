@@ -16,7 +16,7 @@ application {
     mainClass.set("org.springframework.boot.loader.JarLauncher")
 }
 
-val pluginVersion = Version(1, 1, 2)
+val pluginVersion = Version(1, 1, 3)
 
 group = "com.dunctebot"
 version = "$pluginVersion"
@@ -24,6 +24,7 @@ val archivesBaseName = "skybot-lavalink-plugin"
 
 repositories {
     mavenCentral()
+    mavenLocal()
     maven("https://duncte123.jfrog.io/artifactory/maven")
     maven("https://m2.dv8tion.net/releases")
     maven("https://jitpack.io")
@@ -31,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.dunctebot:sourcemanagers:1.5.9")
+    implementation("com.dunctebot:sourcemanagers:1.5.10")
 
     compileOnly("dev.arbjerg.lavalink:plugin-api:0.9.0")
 
@@ -93,7 +94,7 @@ tasks {
         dependsOn(publishToMavenLocal)
     }
     wrapper {
-        gradleVersion = "7.1"
+        gradleVersion = "7.3.3"
         distributionType = Wrapper.DistributionType.ALL
     }
 }
@@ -108,7 +109,7 @@ val verName = "$pluginVersion${if(preRelease) "_${System.getenv("GITHUB_RUN_NUMB
 githubRelease {
     token(System.getenv("GITHUB_TOKEN"))
     owner("DuncteBot")
-    repo("lavalink")
+    repo("skybot-lavalink-plugin")
     targetCommitish(System.getenv("RELEASE_TARGET"))
     releaseAssets(tasks.shadowJar.get().outputs.files.toList())
     tagName(verName)
