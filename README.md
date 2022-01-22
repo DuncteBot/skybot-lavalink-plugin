@@ -10,11 +10,14 @@ Adding support for the following sources:
 - TikTok (not functional)
 - PornHub
 
+# Lavaplayer users
+If you need to add the source managers to your lavalink instance as well you can use this library to add them: https://github.com/DuncteBot/skybot-source-managers
+
 # Adding to lavalink
 
 Latest version: ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/DuncteBot/skybot-lavalink-plugin)
 
-Add the following to your lavalink configuration, make sure to replace `VERSION` with the latest version listed above
+Add the following to your lavalink configuration, make sure to replace `VERSION` with the latest version listed above (do not include the `v`).
 ```yml
 lavalink:
     plugins:
