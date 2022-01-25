@@ -25,6 +25,8 @@ jobs:
       - name: Release to github
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ secrets.M2_USER }}
+          PASSWORD: ${{ secrets.M2_PASS }}
           # just use master
           RELEASE_TARGET: master
-        run: ./gradlew --no-daemon build githubRelease
+        run: ./gradlew --no-daemon build publish githubRelease -x test

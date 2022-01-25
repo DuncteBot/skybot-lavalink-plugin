@@ -15,14 +15,14 @@ If you need to add the source managers to your lavalink instance as well you can
 
 # Adding to lavalink
 
-Latest version: ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/DuncteBot/skybot-lavalink-plugin)
+Latest version: ![Latest version][VERSION]
 
 Add the following to your lavalink configuration, make sure to replace `VERSION` with the latest version listed above (do not include the `v`).
 ```yml
 lavalink:
     plugins:
         - dependency: "com.dunctebot:skybot-lavalink-plugin:VERSION"
-          repository: "https://jitpack.io"
+          repository: "https://m2.duncte123.dev/releases"
 ```
 
 Alternatively you can download the jar from the release on github and place that in your plugins folder
@@ -43,3 +43,5 @@ plugins:
             reddit: true # should be self-explanatory
             ocremix: true # www.ocremix.org
 ```
+
+[VERSION]: https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fm2.duncte123.dev%2Freleases%2Fcom%2Fdunctebot%2Fskybot-lavalink-plugin%2Fmaven-metadata.xml

@@ -16,7 +16,7 @@ application {
     mainClass.set("org.springframework.boot.loader.JarLauncher")
 }
 
-val pluginVersion = Version(1, 1, 3)
+val pluginVersion = Version(1, 1, 4)
 
 group = "com.dunctebot"
 version = "$pluginVersion"
@@ -25,7 +25,7 @@ val archivesBaseName = "skybot-lavalink-plugin"
 repositories {
     mavenCentral()
     mavenLocal()
-    maven("https://duncte123.jfrog.io/artifactory/maven")
+    maven("https://m2.duncte123.dev/releases")
     maven("https://m2.dv8tion.net/releases")
     maven("https://jitpack.io")
     jcenter() //koe :(
@@ -45,8 +45,21 @@ tasks.getByName<Test>("test") {
 }
 
 publishing {
+    repositories {
+        maven {
+            name = "duncte123-m2"
+            url = uri("https://m2.duncte123.dev/releases")
+            credentials {
+                username = System.getenv("USERNAME")
+                password = System.getenv("PASSWORD")
+            }
+            authentication {
+                create<BasicAuthentication>("basic")
+            }
+        }
+    }
     publications {
-        create<MavenPublication>("maven") {
+        create<MavenPublication>("duncte123-m2") {
             groupId = "com.dunctebot"
             artifactId = archivesBaseName
             version = "$pluginVersion"
