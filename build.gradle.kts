@@ -3,7 +3,7 @@ plugins {
     application
     `java-library`
     `maven-publish`
-    id("com.github.johnrengelman.shadow") version "7.1.1"
+    id("com.github.johnrengelman.shadow") version "7.1.2"
     id("com.github.breadmoirai.github-release") version "2.2.12"
 }
 
@@ -32,12 +32,12 @@ repositories {
 }
 
 dependencies {
-    implementation("com.dunctebot:sourcemanagers:1.5.10")
+    implementation("com.dunctebot:sourcemanagers:1.6.0")
 
     compileOnly("dev.arbjerg.lavalink:plugin-api:0.9.0")
 
     // for testing
-    runtimeOnly("com.github.freyacodes.lavalink:Lavalink-Server:dev-SNAPSHOT")
+    runtimeOnly("com.github.freyacodes.Lavalink:Lavalink-Server:dev-SNAPSHOT")
 }
 
 tasks.getByName<Test>("test") {

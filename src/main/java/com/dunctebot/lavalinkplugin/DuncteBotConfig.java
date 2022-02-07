@@ -25,7 +25,7 @@ public class DuncteBotConfig {
         private boolean pornhub = true;
         private boolean reddit = true;
         private boolean ocremix = true;
-
+        private boolean tiktok = true;
 
         public boolean isGetyarn() {
             return getyarn;
@@ -73,6 +73,14 @@ public class DuncteBotConfig {
 
         public void setOcremix(boolean ocremix) {
             this.ocremix = ocremix;
+        }
+
+        public boolean isTiktok() {
+            return tiktok;
+        }
+
+        public void setTiktok(boolean tiktok) {
+            this.tiktok = tiktok;
         }
     }
 }

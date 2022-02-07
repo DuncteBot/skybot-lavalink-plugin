@@ -6,16 +6,16 @@ import com.dunctebot.sourcemanagers.ocremix.OCRemixAudioSourceManager;
 import com.dunctebot.sourcemanagers.pornhub.PornHubAudioSourceManager;
 import com.dunctebot.sourcemanagers.reddit.RedditAudioSourceManager;
 import com.dunctebot.sourcemanagers.speech.SpeechAudioSourceManager;
+import com.dunctebot.sourcemanagers.tiktok.TikTokAudioSourceManager;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import dev.arbjerg.lavalink.api.AudioPlayerManagerConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Objects;
 
-// TODO: better name
-@Component
+@Service
 public class DuncteBotInjector implements AudioPlayerManagerConfiguration {
     private final DuncteBotConfig config;
     private final DuncteBotConfig.Sources sourcesConfig;
@@ -61,6 +61,11 @@ public class DuncteBotInjector implements AudioPlayerManagerConfiguration {
         if (this.sourcesConfig.isOcremix()) {
             logger.info("Registering OC Remix audio source manager");
             manager.registerSourceManager(new OCRemixAudioSourceManager());
+        }
+
+        if (this.sourcesConfig.isTiktok()) {
+            logger.info("Registering TikTok audio source manager");
+            manager.registerSourceManager(new TikTokAudioSourceManager());
         }
 
         return manager;
