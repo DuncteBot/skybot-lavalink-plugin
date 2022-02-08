@@ -1,6 +1,7 @@
 # DuncteBot lavalink plugin
 
 Adding support for the following sources:
+- Mixcloud
 - ocremix.org
 - spotify (not implemented) (via youtube loading)
 - Clyp.it
