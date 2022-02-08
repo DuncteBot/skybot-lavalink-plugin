@@ -2,6 +2,7 @@ package com.dunctebot.lavalinkplugin;
 
 import com.dunctebot.sourcemanagers.clypit.ClypitAudioSourceManager;
 import com.dunctebot.sourcemanagers.getyarn.GetyarnAudioSourceManager;
+import com.dunctebot.sourcemanagers.mixcloud.MixcloudAudioSourceManager;
 import com.dunctebot.sourcemanagers.ocremix.OCRemixAudioSourceManager;
 import com.dunctebot.sourcemanagers.pornhub.PornHubAudioSourceManager;
 import com.dunctebot.sourcemanagers.reddit.RedditAudioSourceManager;
@@ -66,6 +67,11 @@ public class DuncteBotInjector implements AudioPlayerManagerConfiguration {
         if (this.sourcesConfig.isTiktok()) {
             logger.info("Registering TikTok audio source manager");
             manager.registerSourceManager(new TikTokAudioSourceManager());
+        }
+
+        if (this.sourcesConfig.isMixcloud()) {
+            logger.info("Registering Mixcloud audio source manager");
+            manager.registerSourceManager(new MixcloudAudioSourceManager());
         }
 
         return manager;

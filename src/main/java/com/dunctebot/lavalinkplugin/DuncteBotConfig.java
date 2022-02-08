@@ -26,6 +26,7 @@ public class DuncteBotConfig {
         private boolean reddit = true;
         private boolean ocremix = true;
         private boolean tiktok = true;
+        private boolean mixcloud = true;
 
         public boolean isGetyarn() {
             return getyarn;
@@ -81,6 +82,14 @@ public class DuncteBotConfig {
 
         public void setTiktok(boolean tiktok) {
             this.tiktok = tiktok;
+        }
+
+        public boolean isMixcloud() {
+            return mixcloud;
+        }
+
+        public void setMixcloud(boolean mixcloud) {
+            this.mixcloud = mixcloud;
         }
     }
 }

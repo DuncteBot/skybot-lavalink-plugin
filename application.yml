@@ -42,6 +42,7 @@ plugins:
       reddit: false # should be self-explanatory
       ocremix: false # www.ocremix.org
       tiktok: true # tiktok.com
+      mixcloud: true # mixcloud.com
 
 metrics:
   prometheus:

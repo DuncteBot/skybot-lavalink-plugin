@@ -43,6 +43,7 @@ plugins:
             reddit: true # should be self-explanatory
             ocremix: true # www.ocremix.org
             tiktok: true # tiktok.com
+            mixcloud: true # mixcloud.com
 ```
 
 [VERSION]: https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fm2.duncte123.dev%2Freleases%2Fcom%2Fdunctebot%2Fskybot-lavalink-plugin%2Fmaven-metadata.xml
