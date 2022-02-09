@@ -16,7 +16,7 @@ application {
     mainClass.set("org.springframework.boot.loader.JarLauncher")
 }
 
-val pluginVersion = Version(1, 3, 2)
+val pluginVersion = Version(1, 3, 3)
 
 group = "com.dunctebot"
 version = "$pluginVersion"
@@ -26,14 +26,13 @@ repositories {
     mavenCentral()
     mavenLocal()
     maven("https://m2.duncte123.dev/releases")
-    maven("https://m2.duncte123.dev/snapshots")
     maven("https://m2.dv8tion.net/releases")
     maven("https://jitpack.io")
     jcenter() //koe :(
 }
 
 dependencies {
-    implementation("com.dunctebot:sourcemanagers:1.7.1-beta.1")
+    implementation("com.dunctebot:sourcemanagers:1.7.1")
 
     compileOnly("dev.arbjerg.lavalink:plugin-api:0.9.0")
 
