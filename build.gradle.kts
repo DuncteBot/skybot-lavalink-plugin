@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.dunctebot:sourcemanagers:1.7.1")
+    implementation("com.dunctebot:sourcemanagers:1.8.1")
 
     compileOnly("dev.arbjerg.lavalink:plugin-api:0.9.0")
 

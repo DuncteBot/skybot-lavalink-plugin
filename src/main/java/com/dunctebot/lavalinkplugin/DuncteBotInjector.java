@@ -74,6 +74,11 @@ public class DuncteBotInjector implements AudioPlayerManagerConfiguration {
             manager.registerSourceManager(new MixcloudAudioSourceManager());
         }
 
+        if (this.sourcesConfig.isSoundgasm()) {
+            logger.info("Registering Soundgasm audio source manager");
+            manager.registerSourceManager(new SoundgasmAudioSourceManager());
+        }
+
         return manager;
     }
 }

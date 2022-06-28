@@ -10,6 +10,7 @@ Adding support for the following sources:
 - Text To Speech (if prefixed with `speak:`)
 - TikTok (in beta, works on _most_ videos)
 - PornHub
+- soundgasm
 
 # Lavaplayer users
 If you need to add the source managers to your lavalink instance as well you can use this library to add them: https://github.com/DuncteBot/skybot-source-managers
@@ -45,6 +46,7 @@ plugins:
             ocremix: true # www.ocremix.org
             tiktok: true # tiktok.com
             mixcloud: true # mixcloud.com
+            soundgasm: true # soundgasm.net
 ```
 
 [VERSION]: https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fm2.duncte123.dev%2Freleases%2Fcom%2Fdunctebot%2Fskybot-lavalink-plugin%2Fmaven-metadata.xml
