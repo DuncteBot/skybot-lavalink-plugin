@@ -6,6 +6,7 @@ import com.dunctebot.sourcemanagers.mixcloud.MixcloudAudioSourceManager;
 import com.dunctebot.sourcemanagers.ocremix.OCRemixAudioSourceManager;
 import com.dunctebot.sourcemanagers.pornhub.PornHubAudioSourceManager;
 import com.dunctebot.sourcemanagers.reddit.RedditAudioSourceManager;
+import com.dunctebot.sourcemanagers.soundgasm.SoundGasmAudioSourceManager;
 import com.dunctebot.sourcemanagers.speech.SpeechAudioSourceManager;
 import com.dunctebot.sourcemanagers.tiktok.TikTokAudioSourceManager;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
@@ -76,7 +77,7 @@ public class DuncteBotInjector implements AudioPlayerManagerConfiguration {
 
         if (this.sourcesConfig.isSoundgasm()) {
             logger.info("Registering Soundgasm audio source manager");
-            manager.registerSourceManager(new SoundgasmAudioSourceManager());
+            manager.registerSourceManager(new SoundGasmAudioSourceManager());
         }
 
         return manager;
