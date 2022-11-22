@@ -28,16 +28,15 @@ repositories {
     maven("https://m2.duncte123.dev/releases")
     maven("https://m2.dv8tion.net/releases")
     maven("https://jitpack.io")
-    jcenter() //koe :(
 }
 
 dependencies {
     implementation("com.dunctebot:sourcemanagers:1.8.2")
 
-    compileOnly("dev.arbjerg.lavalink:plugin-api:0.9.0")
+    compileOnly("dev.arbjerg.lavalink:plugin-api:3.6.1")
 
     // for testing
-    runtimeOnly("com.github.freyacodes.Lavalink:Lavalink-Server:dev-SNAPSHOT")
+    runtimeOnly("com.github.freyacodes.Lavalink:Lavalink-Server:3ead3be0")
 }
 
 tasks.getByName<Test>("test") {
