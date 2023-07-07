@@ -4,7 +4,7 @@ plugins {
     `maven-publish`
     alias(libs.plugins.lavalink)
     id("com.github.johnrengelman.shadow") version "8.1.1"
-    id("com.github.breadmoirai.github-release") version "2.2.12"
+    id("com.github.breadmoirai.github-release") version "2.4.1"
 }
 
 java {
@@ -111,6 +111,11 @@ tasks {
         gradleVersion = "8.2"
         distributionType = Wrapper.DistributionType.BIN
     }
+}
+// WHY ARE YOU BROKEN
+tasks.githubRelease {
+    dependsOn(tasks.shadowJar)
+    mustRunAfter(tasks.shadowJar)
 }
 
 data class Version(val major: Int, val minor: Int, val patch: Int) {
