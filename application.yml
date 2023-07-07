@@ -40,7 +40,7 @@ plugins:
       tts: false # speak:Words to speak
       pornhub: false # should be self-explanatory
       reddit: false # should be self-explanatory
-      ocremix: false # www.ocremix.org
+      ocremix: true # www.ocremix.org
       tiktok: true # tiktok.com
       mixcloud: true # mixcloud.com
 

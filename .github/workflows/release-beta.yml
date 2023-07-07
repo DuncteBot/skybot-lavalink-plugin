@@ -3,7 +3,7 @@ name: Release Beta
 on:
   push:
     branches:
-      - plugin
+      - master
 
 jobs:
   build:

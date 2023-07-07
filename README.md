@@ -8,7 +8,7 @@ Adding support for the following sources:
 - Reddit
 - getyarn.io
 - Text To Speech (if prefixed with `speak:`)
-- TikTok (in beta, works on _most_ videos)
+- TikTok (in beta, works on _most_ videos will break all the time)
 - PornHub
 - soundgasm
 
@@ -48,5 +48,8 @@ plugins:
             mixcloud: true # mixcloud.com
             soundgasm: true # soundgasm.net
 ```
+
+## development
+You can start the test server by running `./gradlew runLavalink`
 
 [VERSION]: https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fm2.duncte123.dev%2Freleases%2Fcom%2Fdunctebot%2Fskybot-lavalink-plugin%2Fmaven-metadata.xml
