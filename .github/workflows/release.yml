@@ -24,6 +24,7 @@ jobs:
       - name: Set up java
         uses: actions/setup-java@v2
         with:
+          distribution: 'zulu'
           java-version: 17
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
