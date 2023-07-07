@@ -114,6 +114,7 @@ tasks {
 }
 // WHY ARE YOU BROKEN
 tasks.githubRelease {
+    dependsOn(tasks.jar)
     dependsOn(tasks.shadowJar)
     mustRunAfter(tasks.shadowJar)
 }
