@@ -28,4 +28,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RELEASE_TARGET: ${{ github.sha }}
           PRERELEASE: true
-        run: ./gradlew --no-daemon githubRelease
+        run: ./gradlew --no-daemon build githubRelease
