@@ -39,7 +39,8 @@ repositories {
 }
 
 dependencies {
-    implementation("com.dunctebot:sourcemanagers:1.8.3")
+    implementation(libs.sourcemanager)
+//    implementation(project(":skybot-source-managers"))
 }
 
 tasks.getByName<Test>("test") {

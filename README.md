@@ -12,6 +12,13 @@ Adding support for the following sources:
 - PornHub
 - soundgasm
 
+## Lavalink version compatibility
+
+| Lavalink Version | Plugin Version          |
+|------------------|-------------------------|
+| 3.x.x            | 1.4.x (1.5 is untested) |
+| 4.x.x            | 1.4.x OR 1.5.x          |
+
 # Lavaplayer users
 If you need to add the source managers to your lavalink instance as well you can use this library to add them: https://github.com/DuncteBot/skybot-source-managers
 

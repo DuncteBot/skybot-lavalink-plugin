@@ -11,6 +11,7 @@ import com.dunctebot.sourcemanagers.speech.SpeechAudioSourceManager;
 import com.dunctebot.sourcemanagers.tiktok.TikTokAudioSourceManager;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import dev.arbjerg.lavalink.api.AudioPlayerManagerConfiguration;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -27,8 +28,9 @@ public class DuncteBotInjector implements AudioPlayerManagerConfiguration {
         this.sourcesConfig = sourcesConfig;
     }
 
+    @NotNull
     @Override
-    public AudioPlayerManager configure(AudioPlayerManager manager) {
+    public AudioPlayerManager configure(@NotNull AudioPlayerManager manager) {
         final Logger logger = LoggerFactory.getLogger(DuncteBotInjector.class);
 
         // register custom source managers
