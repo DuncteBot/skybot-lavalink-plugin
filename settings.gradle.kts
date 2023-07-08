@@ -24,7 +24,3 @@ fun VersionCatalogBuilder.common() {
 fun VersionCatalogBuilder.plugins() {
     plugin("lavalink", "dev.arbjerg.lavalink.gradle-plugin").version("1.0.7")
 }
-
-fun VersionCatalogBuilder.testBot() {
-    //
-}
