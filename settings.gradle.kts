@@ -14,7 +14,7 @@ dependencyResolutionManagement {
 }
 
 fun VersionCatalogBuilder.common() {
-    library("sourcemanager", "com.dunctebot", "sourcemanagers").version("1.8.3")
+    library("sourcemanager", "com.dunctebot", "sourcemanagers").version("1.8.4")
 
     version("lavalink-api", "4.0.0-beta.1")
     version("lavalink-server", "1c0795bf156fe6559c9c0aed0412bcd8f323a3e0")
