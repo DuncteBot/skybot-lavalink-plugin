@@ -16,11 +16,11 @@ dependencyResolutionManagement {
 fun VersionCatalogBuilder.common() {
     library("sourcemanager", "com.dunctebot", "sourcemanagers").version("1.8.4")
 
-    version("lavalink-api", "4.0.0-beta.1")
-    version("lavalink-server", "1c0795bf156fe6559c9c0aed0412bcd8f323a3e0")
+    version("lavalink-api", "4.0.0-beta.2")
+    version("lavalink-server", "0f59a5a981af0dfa13cb9f51145e077e8dd89e13")
 
 }
 
 fun VersionCatalogBuilder.plugins() {
-    plugin("lavalink", "dev.arbjerg.lavalink.gradle-plugin").version("1.0.7")
+    plugin("lavalink", "dev.arbjerg.lavalink.gradle-plugin").version("1.0.15")
 }
