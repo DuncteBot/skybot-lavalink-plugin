@@ -51,7 +51,7 @@ publishing {
     repositories {
         maven {
             name = "duncte123-m2"
-            url = uri("https://m2.duncte123.dev/releases")
+            url = uri("https://maven.lavalink.dev/releases")
             credentials {
                 username = System.getenv("USERNAME")
                 password = System.getenv("PASSWORD")

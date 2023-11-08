@@ -33,7 +33,7 @@ Add the following to your lavalink configuration, make sure to replace `VERSION`
 lavalink:
     plugins:
         - dependency: "com.dunctebot:skybot-lavalink-plugin:VERSION"
-          repository: "https://m2.duncte123.dev/releases"
+          snapshot: false
 ```
 
 Alternatively you can download the jar from the release on github and place that in your plugins folder
@@ -61,4 +61,4 @@ plugins:
 ## development
 You can start the test server by running `./gradlew runLavalink`
 
-[VERSION]: https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fm2.duncte123.dev%2Freleases%2Fcom%2Fdunctebot%2Fskybot-lavalink-plugin%2Fmaven-metadata.xml
+[VERSION]: https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fmaven.lavalink.dev%2Freleases%2Fcom%2Fdunctebot%2Fskybot-lavalink-plugin%2Fmaven-metadata.xml
