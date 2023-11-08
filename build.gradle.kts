@@ -50,7 +50,7 @@ tasks.getByName<Test>("test") {
 publishing {
     repositories {
         maven {
-            name = "duncte123-m2"
+            name = "lavalink"
             url = uri("https://maven.lavalink.dev/releases")
             credentials {
                 username = System.getenv("USERNAME")
@@ -62,7 +62,7 @@ publishing {
         }
     }
     publications {
-        create<MavenPublication>("duncte123-m2") {
+        create<MavenPublication>("lavalink") {
             groupId = "com.dunctebot"
             artifactId = archivesBaseName
             version = "$pluginVersion"

@@ -1,4 +1,4 @@
-rootProject.name = "lavalink-plugin"
+rootProject.name = "skybot-lavalink-plugin"
 //include(":skybot-source-managers")
 //project(":skybot-source-managers").projectDir = File("../skybot-source-managers")
 
