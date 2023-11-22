@@ -61,15 +61,15 @@ publishing {
             }
         }
     }
-    publications {
-        create<MavenPublication>("lavalink") {
-            groupId = "com.dunctebot"
-            artifactId = archivesBaseName
-            version = "$pluginVersion"
-
-            from(components["java"])
-        }
-    }
+//    publications {
+//        create<MavenPublication>("lavalink") {
+//            groupId = "com.dunctebot"
+//            artifactId = archivesBaseName
+//            version = "$pluginVersion"
+//
+//            from(components["java"])
+//        }
+//    }
 }
 
 // make sure that we can resolve the dependencies
