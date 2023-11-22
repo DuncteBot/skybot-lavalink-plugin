@@ -33,7 +33,8 @@ Add the following to your lavalink configuration, make sure to replace `VERSION`
 lavalink:
     plugins:
         - dependency: "com.dunctebot:skybot-lavalink-plugin:VERSION"
-          snapshot: false
+          repository : "https://maven.lavalink.dev/releases" # (optional on lavalink 4)
+          snapshot: false # (optional, tells lavalink to use the default snaptshot repository instead)
 ```
 
 Alternatively you can download the jar from the release on github and place that in your plugins folder
