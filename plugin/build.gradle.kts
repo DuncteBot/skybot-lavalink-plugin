@@ -7,7 +7,7 @@ plugins {
     id("com.github.breadmoirai.github-release")
 }
 
-val pluginVersion = Version(1, 6, 0)
+val pluginVersion = Version(1, 6, 1)
 
 group = "com.dunctebot"
 version = "$pluginVersion"
@@ -66,7 +66,11 @@ publishing {
     repositories {
         maven {
             name = "lavalink"
-            url = uri("https://maven.lavalink.dev/releases")
+            url = if (preRelease) {
+                uri("https://maven.lavalink.dev/snapshots")
+            } else {
+                uri("https://maven.lavalink.dev/releases")
+            }
             credentials {
                 username = System.getenv("USERNAME")
                 password = System.getenv("PASSWORD")

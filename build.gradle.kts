@@ -1,5 +1,6 @@
 plugins {
     java
+    `maven-publish`
     alias(libs.plugins.lavalink) apply false
     id("com.github.johnrengelman.shadow") version "8.1.1" apply false
     id("com.github.breadmoirai.github-release") version "2.4.1" apply false

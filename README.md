@@ -20,8 +20,10 @@ Adding support for the following sources:
 
 **\* Version 1.5.x will only work on Lavalink v3 if you are running java 17 or newer**
 
-# Lavaplayer users
-If you need to add the source managers to your lavalink instance as well you can use this library to add them: https://github.com/DuncteBot/skybot-source-managers
+# Lava*player* users
+Currently not supported
+
+~~If you need to add the source managers to your lavalink instance as well you can use this library to add them: https://github.com/DuncteBot/skybot-source-managers~~
 
 # Adding to lavalink
 
