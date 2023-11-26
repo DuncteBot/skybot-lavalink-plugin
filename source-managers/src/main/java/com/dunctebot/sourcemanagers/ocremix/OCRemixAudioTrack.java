@@ -25,7 +25,7 @@ import com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrackInfo;
 import com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor;
 
-public class OCRemixAudioTrack extends Mp3Track implements IWillUseIdentifierInstead {
+public class OCRemixAudioTrack extends Mp3Track {
     private static final String[] MUSIC_HOSTS = {
         "iterations.org",
         "ocrmirror.org",
@@ -58,6 +58,6 @@ public class OCRemixAudioTrack extends Mp3Track implements IWillUseIdentifierIns
 
     @Override
     public String getPlaybackUrl() {
-        return "https://" + MUSIC_HOSTS[this.hostIndex] + this.trackInfo.uri;
+        return "https://" + MUSIC_HOSTS[this.hostIndex] + this.trackInfo.identifier;
     }
 }

@@ -20,7 +20,8 @@ import com.sedmelluq.discord.lavaplayer.track.AudioReference;
 public class OCRegexTest {
 
     public static void main(String[] args) {
-        final var id1 = "OCR03310";
+//        final var id1 = "OCR03310";
+        final var id1 = "OCR03511";
         final var id2 = "https://ocremix.org/remix/OCR03310";
 
         final var mngr = new OCRemixAudioSourceManager();

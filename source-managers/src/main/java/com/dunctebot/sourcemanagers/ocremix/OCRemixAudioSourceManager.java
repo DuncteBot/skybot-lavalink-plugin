@@ -55,7 +55,6 @@ public class OCRemixAudioSourceManager extends AbstractDuncteBotHttpSource {
         final String identifier = reference.identifier;
         final Matcher matcher = REMIX_PATTERN.matcher(identifier);
 
-        // TODO: check if starts with OCR?
         if (!matcher.matches()) {
             return null;
         }
@@ -82,9 +81,9 @@ public class OCRemixAudioSourceManager extends AbstractDuncteBotHttpSource {
                 meta.name,
                 meta.remixers,
                 meta.trackLength,
-                "https://ocremix.org/remix/" + meta.id,
+                meta.fileName,
                 false,
-                meta.fileName
+                "https://ocremix.org/remix/" + meta.id
             );
 
             return new OCRemixAudioTrack(info, this);
@@ -115,6 +114,8 @@ public class OCRemixAudioSourceManager extends AbstractDuncteBotHttpSource {
         if (remix == null) {
             return null;
         }
+
+        System.out.println(remix.html());
 
         final String remixers = elem.selectFirst("remixers")
             .children()
