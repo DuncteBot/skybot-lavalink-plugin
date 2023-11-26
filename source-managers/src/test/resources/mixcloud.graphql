@@ -1,0 +1,381 @@
+query PlayerHeroQuery(
+    $lookup: CloudcastLookup!
+) {
+    cloudcast: cloudcastLookup(lookup: $lookup) {
+        id
+        name
+        picture {
+            isLight
+            primaryColor
+            darkPrimaryColor: primaryColor(darken: 60)
+            ...UGCImage_picture
+        }
+        ...AudioPageAvatar_cloudcast
+        owner {
+            ...AudioPageAvatar_user
+            id
+        }
+        restrictedReason
+        seekRestriction
+        ...HeaderActions_cloudcast
+        ...PlayButton_cloudcast
+        ...CloudcastBaseAutoPlayComponent_cloudcast
+        ...HeroWaveform_cloudcast
+        ...RepeatPlayUpsellBar_cloudcast
+        ...HeroAudioMeta_cloudcast
+        ...HeroChips_cloudcast
+    }
+    viewer {
+        restrictedPlayer: featureIsActive(switch: "restricted_player")
+        hasRepeatPlayFeature: featureIsActive(switch: "repeat_play")
+        ...HeroWaveform_viewer
+        ...HeroAudioMeta_viewer
+        ...HeaderActions_viewer
+        ...AudioPageAvatar_viewer
+        id
+    }
+}
+
+fragment AddToButton_cloudcast on Cloudcast {
+    id
+    isUnlisted
+    isPublic
+}
+
+fragment AudioPageAvatar_cloudcast on Cloudcast {
+    id
+    owner {
+        id
+    }
+    creatorAttributions(first: 2) {
+        totalCount
+        edges {
+            node {
+                displayName
+                followers {
+                    totalCount
+                }
+                hasPremiumFeatures
+                hasProFeatures
+                isStaff
+                username
+                picture {
+                    primaryColor
+                    urlRoot
+                }
+                id
+            }
+        }
+    }
+}
+
+fragment AudioPageAvatar_user on User {
+    displayName
+    followers {
+        totalCount
+    }
+    hasPremiumFeatures
+    hasProFeatures
+    isStaff
+    username
+    picture {
+        primaryColor
+        urlRoot
+    }
+    ...CTAButtons_user
+}
+
+fragment AudioPageAvatar_viewer on Viewer {
+    ...CTAButtons_viewer
+}
+
+fragment CTAButtons_user on User {
+    isSelect
+    ...ChannelSubscribeButton_user
+    ...ProfileFollowButton_user
+}
+
+fragment CTAButtons_viewer on Viewer {
+    ...ChannelSubscribeButton_viewer
+    ...ProfileFollowButton_viewer
+}
+
+fragment ChannelSubscribeButton_user on User {
+    username
+    displayName
+    isSelect
+    isViewer
+    isTippable
+    isSubscribedTo
+    isFollowing
+    selectUpsell {
+        valuePropsOffered
+        planInfo {
+            displayAmount
+        }
+    }
+}
+
+fragment ChannelSubscribeButton_viewer on Viewer {
+    me {
+        hasProFeatures
+        id
+    }
+}
+
+fragment CloudcastBaseAutoPlayComponent_cloudcast on Cloudcast {
+    id
+    streamInfo {
+        uuid
+        url
+        hlsUrl
+        dashUrl
+    }
+    audioLength
+    seekRestriction
+    currentPosition
+}
+
+fragment FavoriteButton_cloudcast on Cloudcast {
+    id
+    isFavorited
+    isPublic
+    hiddenStats
+    favorites {
+        totalCount
+    }
+    slug
+    owner {
+        id
+        isFollowing
+        username
+        isSelect
+        displayName
+        isViewer
+    }
+}
+
+fragment FavoriteButton_viewer on Viewer {
+    me {
+        id
+    }
+}
+
+fragment HeaderActions_cloudcast on Cloudcast {
+    owner {
+        isViewer
+        id
+    }
+    ...FavoriteButton_cloudcast
+    ...AddToButton_cloudcast
+    ...RepostButton_cloudcast
+    ...MoreMenu_cloudcast
+    ...ShareButton_cloudcast
+}
+
+fragment HeaderActions_viewer on Viewer {
+    ...FavoriteButton_viewer
+    ...RepostButton_viewer
+    ...MoreMenu_viewer
+}
+
+fragment HeroAudioMeta_cloudcast on Cloudcast {
+    slug
+    plays
+    publishDate
+    qualityScore
+    listenerMinutes
+    owner {
+        username
+        id
+    }
+    hiddenStats
+}
+
+fragment HeroAudioMeta_viewer on Viewer {
+    me {
+        isStaff
+        id
+    }
+}
+
+fragment HeroChips_cloudcast on Cloudcast {
+    isUnlisted
+    audioType
+    isExclusive
+    audioQuality
+    owner {
+        isViewer
+        id
+    }
+    restrictedReason
+    isAwaitingAudio
+    isDisabledCopyright
+}
+
+fragment HeroWaveform_cloudcast on Cloudcast {
+    id
+    audioType
+    waveformUrl
+    previewUrl
+    audioLength
+    isPlayable
+    streamInfo {
+        hlsUrl
+        dashUrl
+        url
+        uuid
+    }
+    restrictedReason
+    seekRestriction
+    currentPosition
+    ...SeekWarning_cloudcast
+}
+
+fragment HeroWaveform_viewer on Viewer {
+    restrictedPlayer: featureIsActive(switch: "restricted_player")
+}
+
+fragment MoreMenu_cloudcast on Cloudcast {
+    id
+    isSpam
+    owner {
+        isViewer
+        id
+    }
+}
+
+fragment MoreMenu_viewer on Viewer {
+    me {
+        id
+    }
+}
+
+fragment PlayButton_cloudcast on Cloudcast {
+    restrictedReason
+    owner {
+        displayName
+        country
+        username
+        isSubscribedTo
+        isViewer
+        id
+    }
+    slug
+    id
+    isAwaitingAudio
+    isDraft
+    isPlayable
+    streamInfo {
+        hlsUrl
+        dashUrl
+        url
+        uuid
+    }
+    audioLength
+    currentPosition
+    proportionListened
+    repeatPlayAmount
+    hasPlayCompleted
+    seekRestriction
+    previewUrl
+    isExclusivePreviewOnly
+    isExclusive
+}
+
+fragment ProfileFollowButton_user on User {
+    id
+    isFollowing
+    followers {
+        totalCount
+    }
+    username
+    isViewer
+    ...ProfileFollowingButton_user
+}
+
+fragment ProfileFollowButton_viewer on Viewer {
+    me {
+        id
+    }
+    ...ProfileFollowingButton_viewer
+}
+
+fragment ProfileFollowingButton_user on User {
+    id
+    receivesUploadNotifications
+}
+
+fragment ProfileFollowingButton_viewer on Viewer {
+    settings {
+        disableEmail
+        emailNotifications {
+            newUpload
+        }
+    }
+}
+
+fragment RepeatPlayUpsellBar_cloudcast on Cloudcast {
+    audioType
+    owner {
+        username
+        displayName
+        isSelect
+        id
+    }
+}
+
+fragment RepostButton_cloudcast on Cloudcast {
+    id
+    isReposted
+    isExclusive
+    isPublic
+    hiddenStats
+    reposts {
+        totalCount
+    }
+    owner {
+        isViewer
+        isSubscribedTo
+        id
+    }
+}
+
+fragment RepostButton_viewer on Viewer {
+    me {
+        id
+    }
+}
+
+fragment SeekWarning_cloudcast on Cloudcast {
+    owner {
+        displayName
+        isSelect
+        username
+        id
+    }
+    seekRestriction
+}
+
+fragment ShareButton_cloudcast on Cloudcast {
+    id
+    isUnlisted
+    isPublic
+    slug
+    description
+    audioType
+    picture {
+        urlRoot
+    }
+    owner {
+        displayName
+        isViewer
+        username
+        id
+    }
+}
+
+fragment UGCImage_picture on Picture {
+    urlRoot
+    primaryColor
+}

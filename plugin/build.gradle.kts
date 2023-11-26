@@ -1,5 +1,4 @@
 plugins {
-    java
     `java-library`
     `maven-publish`
 
@@ -26,8 +25,7 @@ lavalinkPlugin {
 }
 
 dependencies {
-    implementation(libs.sourcemanager)
-//    implementation(project(":skybot-source-managers"))
+    implementation(projects.sourceManagers)
 }
 
 // make sure that we can resolve the dependencies
