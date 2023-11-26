@@ -93,7 +93,15 @@ githubRelease {
     prerelease(preRelease)
 
     if (preRelease) {
-        body("This is a pre-release version. Please do not use it in production.")
+        body("""This is a pre-release version. Please do not use it in production. To use it set `snapshot` to true in your plugin configuration.
+            |Example:
+            |```yml
+            |lavalink:
+            |    plugins:
+            |        - dependency: "com.dunctebot:skybot-lavalink-plugin:VERSION"
+            |          snapshot: true
+            |```
+        """.trimMargin())
     } else {
         body(changelog())
     }
