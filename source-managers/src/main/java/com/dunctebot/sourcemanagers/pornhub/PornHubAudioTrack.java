@@ -142,7 +142,6 @@ public class PornHubAudioTrack extends MpegTrack {
             final Matcher matcher = pattern.matcher(htmlPage);
 
             if (!matcher.find()) {
-                System.out.println(htmlPage);
                 throw new FriendlyException("URL part " + item + " missing", SUSPICIOUS, null);
             }
 
