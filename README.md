@@ -20,6 +20,13 @@ Adding support for the following sources:
 
 **\* Version 1.5.x will only work on Lavalink v3 if you are running java 17 or newer**
 
+### Latest version old releases
+
+| Notation | Latest Version |
+|----------|----------------|
+| 1.4.x    | 1.4.2          |
+| 1.5.x    | 1.5.1          |
+
 # Lava*player* users
 Currently not supported
 

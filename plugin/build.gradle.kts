@@ -98,7 +98,7 @@ githubRelease {
             |```yml
             |lavalink:
             |    plugins:
-            |        - dependency: "com.dunctebot:skybot-lavalink-plugin:VERSION"
+            |        - dependency: "com.dunctebot:skybot-lavalink-plugin:$verName"
             |          snapshot: true
             |```
         """.trimMargin())
