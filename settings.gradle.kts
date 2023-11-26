@@ -1,5 +1,7 @@
 rootProject.name = "skybot-lavalink-plugin"
-//include(":skybot-source-managers")
+
+include("plugin")
+
 //project(":skybot-source-managers").projectDir = File("../skybot-source-managers")
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
