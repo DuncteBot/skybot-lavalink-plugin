@@ -1,0 +1,4 @@
+type CloudcastLookup {
+    slug: String
+    username: String
+}

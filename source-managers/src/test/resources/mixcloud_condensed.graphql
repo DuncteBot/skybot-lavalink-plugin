@@ -1,0 +1,44 @@
+query PlayerHeroQuery(
+    $lookup: CloudcastLookup!
+) {
+    cloudcast: cloudcastLookup(lookup: $lookup) {
+        id
+        name
+        owner {
+            ...AudioPageAvatar_user
+            id
+        }
+        restrictedReason
+        seekRestriction
+        ...PlayButton_cloudcast
+    }
+}
+
+fragment AudioPageAvatar_user on User {
+    displayName
+    username
+}
+
+fragment PlayButton_cloudcast on Cloudcast {
+    restrictedReason
+    owner {
+        displayName
+        country
+        username
+        isSubscribedTo
+        isViewer
+        id
+    }
+    slug
+    id
+    isDraft
+    isPlayable
+    streamInfo {
+        hlsUrl
+        dashUrl
+        url
+        uuid
+    }
+    audioLength
+    seekRestriction
+}
