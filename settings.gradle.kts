@@ -17,7 +17,7 @@ fun VersionCatalogBuilder.common() {
     library("sourcemanager", "com.dunctebot", "sourcemanagers").version("1.9.0")
 
     version("lavalink-api", "4.0.0-beta.5")
-    version("lavalink-server", "0f59a5a981af0dfa13cb9f51145e077e8dd89e13")
+    version("lavalink-server", "47201924be7d5a459753fc85f00ca30e49ba3cd1")
 
 }
 

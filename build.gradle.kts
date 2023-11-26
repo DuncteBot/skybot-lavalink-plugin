@@ -35,6 +35,8 @@ repositories {
     mavenLocal()
     maven("https://m2.duncte123.dev/releases")
     maven("https://m2.dv8tion.net/releases")
+    maven("https://maven.lavalink.dev/releases")
+    maven("https://maven.lavalink.dev/snapshots")
     maven("https://jitpack.io")
 }
 
