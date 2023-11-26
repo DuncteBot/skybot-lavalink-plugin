@@ -1,6 +1,7 @@
-rootProject.name = "skybot-lavalink-plugin"
+rootProject.name = "skybot-lavalink-plugin-base"
 
 include("plugin")
+project(":plugin").name = "skybot-lavalink-plugin"
 include("source-managers")
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
