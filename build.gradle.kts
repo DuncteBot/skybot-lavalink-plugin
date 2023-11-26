@@ -13,7 +13,7 @@ java {
     }
 }
 
-val pluginVersion = Version(1, 5, 1)
+val pluginVersion = Version(1, 6, 0)
 
 group = "com.dunctebot"
 version = "$pluginVersion"

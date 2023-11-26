@@ -3,21 +3,20 @@
 Adding support for the following sources:
 - Mixcloud
 - ocremix.org
-- spotify (not implemented) (via youtube loading)
 - Clyp.it
 - Reddit
 - getyarn.io
 - Text To Speech (if prefixed with `speak:`)
-- TikTok (in beta, works on _most_ videos will break all the time)
+- TikTok (in beta, works on _most_ videos and **will** break all the time)
 - PornHub
 - soundgasm
 
 ## Lavalink version compatibility
 
-| Lavalink Version | Plugin Version    |
-|------------------|-------------------|
-| 3.x.x            | 1.4.x OR 1.5.x \* |
-| 4.x.x            | 1.4.x OR 1.5.x    |
+| Lavalink Version | Plugin Version        |
+|------------------|-----------------------|
+| 3.x.x            | 1.4.x OR 1.5.x \*     |
+| 4.x.x            | 1.4.x, 1.5.x OR 1.6.x |
 
 **\* Version 1.5.x will only work on Lavalink v3 if you are running java 17 or newer**
 
