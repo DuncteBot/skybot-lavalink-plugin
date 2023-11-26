@@ -20,7 +20,8 @@ import com.sedmelluq.discord.lavaplayer.track.AudioReference;
 
 public class PHtest {
     public static void main(String[] args) throws Exception {
-        final var link = "https://www.pornhub.com/view_video.php?viewkey=ph5fc5ef73cfc87";
+//        final var link = "https://www.pornhub.com/view_video.php?viewkey=ph5fc5ef73cfc87";
+        final var link = "https://www.pornhub.com/view_video.php?viewkey=ph6383940fcb8d7";
         final var mngr = new PornHubAudioSourceManager();
 
         final var track = (PornHubAudioTrack) mngr.loadItem(null, new AudioReference(link, null));

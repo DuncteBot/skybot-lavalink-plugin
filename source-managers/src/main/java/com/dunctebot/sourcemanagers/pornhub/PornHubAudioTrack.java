@@ -29,7 +29,9 @@ import org.apache.http.client.methods.HttpGet;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -79,16 +81,26 @@ public class PornHubAudioTrack extends MpegTrack {
 
                 int i = 0;
                 while (!defs.index(i).isNull()) {
+                    final JsonBrowser definition = defs.index(i);
                     // we found the default quality
-                    if ("mp4".equalsIgnoreCase(defs.index(i).get("format").safeText())) {
+                    if ("mp4".equalsIgnoreCase(definition.get("format").safeText())) {
                         final String cookies = Arrays.stream(response.getHeaders("Set-Cookie"))
                             .map(NameValuePair::getValue)
                             .map((s) -> s.split(";", 2)[0])
                             .collect(Collectors.joining("; "));
-                        final String getMedia = parseJsValueToUrl(
+                        /*final String getMedia = parseJsValueToUrl(
                             html,
                             scoupMediaVar(html, "media_" + i)
-                        );
+                        );*/
+                        String getMedia = definition.get("videoUrl").safeText();
+
+                        if (getMedia.isBlank()) {
+                            // Try the old way when the videoUrl is blank.
+                            getMedia = parseJsValueToUrl(
+                                    html,
+                                    scoupMediaVar(html, "media_" + i)
+                            );
+                        }
 
                         return loadMp4Url(getMedia, cookies);
                     }

@@ -115,8 +115,6 @@ public class OCRemixAudioSourceManager extends AbstractDuncteBotHttpSource {
             return null;
         }
 
-        System.out.println(remix.html());
-
         final String remixers = elem.selectFirst("remixers")
             .children()
             .stream()

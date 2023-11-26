@@ -32,6 +32,7 @@ dependencies {
     implementation(libs.findbugs)
 
     testImplementation(libs.lavaplayer)
+    testImplementation(libs.logger.impl)
 }
 
 configure<JavaPluginExtension> {
