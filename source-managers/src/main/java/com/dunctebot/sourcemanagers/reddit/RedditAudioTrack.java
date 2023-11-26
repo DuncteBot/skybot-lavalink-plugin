@@ -33,7 +33,7 @@ public class RedditAudioTrack extends MpegTrack {
     }
 
     static String getPlaybackUrl(String id) {
-        return "https://v.redd.it/" + id + "/DASH_audio.mp4?source=fallback";
+        return "https://v.redd.it/" + id + "/DASH_AUDIO_128.mp4";
     }
 
     @Override
