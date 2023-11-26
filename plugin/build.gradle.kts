@@ -91,5 +91,10 @@ githubRelease {
     releaseName(verName)
     overwrite(false)
     prerelease(preRelease)
-    body(changelog())
+
+    if (preRelease) {
+        body("This is a pre-release version. Please do not use it in production.")
+    } else {
+        body(changelog())
+    }
 }
