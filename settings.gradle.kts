@@ -17,8 +17,8 @@ dependencyResolutionManagement {
 }
 
 fun VersionCatalogBuilder.common() {
-    version("lavalink-api", "4.0.0-beta.5")
-    version("lavalink-server", "47201924be7d5a459753fc85f00ca30e49ba3cd1")
+    version("lavalink-api", "4.0.0")
+    version("lavalink-server", "4.0.0")
 }
 
 fun VersionCatalogBuilder.sourceManager() {

@@ -21,7 +21,8 @@ lavalinkPlugin {
     path = "$group.lavalinkplugin"
     version = verName
     apiVersion = libs.versions.lavalink.api
-    serverVersion = gitHash(libs.versions.lavalink.server)
+//    serverVersion = gitHash(libs.versions.lavalink.server)
+    serverVersion = libs.versions.lavalink.server
 }
 
 dependencies {
