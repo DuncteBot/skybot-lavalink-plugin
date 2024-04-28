@@ -156,7 +156,7 @@ public class PornHubAudioTrack extends MpegTrack {
     private String loadMp4Url(String jsonPage, String cookie) throws IOException {
         final HttpGet mediaGet = new HttpGet(jsonPage);
 
-        mediaGet.setHeader("Cookie", cookie + "; platform=pc; age_verified=1");
+        mediaGet.setHeader("Cookie", cookie + "; platform=pc; age_verified=1; accessAgeDisclaimerPH=1");
         mediaGet.setHeader("Referer", getPlayerPage(this.trackInfo.identifier));
 
         try (final CloseableHttpResponse response = this.getSourceManager().getHttpInterface().execute(mediaGet)) {

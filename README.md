@@ -8,7 +8,7 @@ Adding support for the following sources:
 - getyarn.io
 - Text To Speech (if prefixed with `speak:`)
 - TikTok (in beta, works on _most_ videos and **will** break all the time)
-- PornHub
+- PornHub (search by prefixing with `phsearch:`)
 - soundgasm
 
 ## Lavalink version compatibility

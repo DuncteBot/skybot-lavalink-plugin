@@ -22,20 +22,20 @@ import com.sedmelluq.discord.lavaplayer.tools.ExceptionTools;
 import com.sedmelluq.discord.lavaplayer.tools.FriendlyException;
 import com.sedmelluq.discord.lavaplayer.tools.FriendlyException.Severity;
 import com.sedmelluq.discord.lavaplayer.tools.JsonBrowser;
-import com.sedmelluq.discord.lavaplayer.track.AudioItem;
-import com.sedmelluq.discord.lavaplayer.track.AudioReference;
-import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
-import com.sedmelluq.discord.lavaplayer.track.AudioTrackInfo;
+import com.sedmelluq.discord.lavaplayer.track.*;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
+import org.jsoup.Jsoup;
 
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class PornHubAudioSourceManager extends AbstractDuncteBotHttpSource {
     private static final String DOMAIN_PATTERN = "https?://([a-z]+\\.)?pornhub\\.(com|net|org)";
@@ -44,6 +44,9 @@ public class PornHubAudioSourceManager extends AbstractDuncteBotHttpSource {
     public static final Pattern VIDEO_INFO_REGEX = Pattern.compile("var flashvars_\\d+ = (\\{.+})");
     private static final Pattern MODEL_INFO_REGEX = Pattern.compile("var MODEL_PROFILE = (\\{.+})");
 
+    private static final String SEARCH_PREFIX = "phsearch";
+    private static final String SEARCH_PREFIX_DEFAULT = "phsearch:";
+
     @Override
     public String getSourceName() {
         return "pornhub";
@@ -51,11 +54,11 @@ public class PornHubAudioSourceManager extends AbstractDuncteBotHttpSource {
 
     @Override
     public AudioItem loadItem(AudioPlayerManager manager, AudioReference reference) {
-        if (!VIDEO_REGEX.matcher(reference.identifier).matches()) {
-            return null;
-        }
-
         try {
+            if (!VIDEO_REGEX.matcher(reference.identifier).matches()) {
+                return processAsSearchQuery(reference);
+            }
+
             return loadItemOnce(reference);
         } catch (Exception e) {
             throw ExceptionTools.wrapUnfriendlyExceptions("Something went wrong", Severity.SUSPICIOUS, e);
@@ -75,6 +78,56 @@ public class PornHubAudioSourceManager extends AbstractDuncteBotHttpSource {
     @Override
     public AudioTrack decodeTrack(AudioTrackInfo trackInfo, DataInput input) {
         return new PornHubAudioTrack(trackInfo, this);
+    }
+
+    private AudioItem processAsSearchQuery(AudioReference reference) throws IOException {
+        if (reference.identifier.startsWith(SEARCH_PREFIX)) {
+            if (reference.identifier.startsWith(SEARCH_PREFIX_DEFAULT)) {
+                return attemptSearch(reference.identifier.substring(SEARCH_PREFIX_DEFAULT.length()).trim());
+            }
+        }
+
+        return null;
+    }
+
+    public AudioItem attemptSearch(String query) throws IOException {
+        // https://www.pornhub.com/video/search?search=a+few+words
+
+        final String html = loadHtml(
+                "https://www.pornhub.com/video/search?search=" +
+                        URLEncoder.encode(query, StandardCharsets.UTF_8)
+        );
+
+        if (html == null) {
+            notAvailable();
+        }
+
+        // ul#videoSearchResult -> contains results
+        // li.pcVideoListItem -> contains all videos
+
+        final var document = Jsoup.parse(html);
+        final var results = document.select("ul#videoSearchResult").first();
+
+        if (results == null) {
+            throw new FriendlyException(
+                    "Search result element not found, contact dev",
+                    Severity.SUSPICIOUS,
+                    new IllegalArgumentException("Search result element not found, contact dev")
+            );
+        }
+
+        final var videos = results.select("li.pcVideoListItem");
+
+        final var phTracks = videos.stream()
+                .map((it) -> PHHelpers.trackFromSearchElement(it, this))
+                .collect(Collectors.toList());
+
+        return new BasicAudioPlaylist(
+                "Search results for " + query,
+                phTracks,
+                null,
+                true
+        );
     }
 
     private AudioItem loadItemOnce(AudioReference reference) throws IOException {
@@ -163,7 +216,7 @@ public class PornHubAudioSourceManager extends AbstractDuncteBotHttpSource {
     private String loadHtml(String url) throws IOException {
         final HttpGet httpGet = new HttpGet(url);
 
-        httpGet.setHeader("Cookie", "platform=pc; age_verified=1");
+        httpGet.setHeader("Cookie", "platform=pc; age_verified=1; accessAgeDisclaimerPH=1");
 
         try (final CloseableHttpResponse response = getHttpInterface().execute(httpGet)) {
             final int statusCode = response.getStatusLine().getStatusCode();
