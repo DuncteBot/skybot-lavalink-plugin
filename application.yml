@@ -43,6 +43,7 @@ plugins:
       ocremix: true # www.ocremix.org
       tiktok: true # tiktok.com
       mixcloud: true # mixcloud.com
+      pixeldrain: true # pixeldrain.com
 
 metrics:
   prometheus:

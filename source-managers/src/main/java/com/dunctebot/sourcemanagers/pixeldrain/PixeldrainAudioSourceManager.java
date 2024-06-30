@@ -75,9 +75,6 @@ public class PixeldrainAudioSourceManager extends AbstractDuncteBotHttpSource {
             throw new FriendlyException("Type " + type + " is currently not supported", FriendlyException.Severity.COMMON, null);
         }
 
-        System.out.println(type);
-        System.out.println(title);
-
         return new AudioTrackInfo(
                 title,
                 "Unknown artist",

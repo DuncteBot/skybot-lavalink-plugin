@@ -18,81 +18,53 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
 import java.util.Objects;
+
+import static java.util.Map.entry;
 
 @Service
 public class DuncteBotInjector implements AudioPlayerManagerConfiguration {
-    private final DuncteBotConfig config;
-    private final DuncteBotConfig.Sources sourcesConfig;
+    private final Logger logger = LoggerFactory.getLogger(DuncteBotInjector.class);
+    private final Map<String, SourceManagerInfo> sourceManagers;
 
     public DuncteBotInjector(DuncteBotConfig config, DuncteBotConfig.Sources sourcesConfig) {
-        this.config = config;
-        this.sourcesConfig = sourcesConfig;
+
+        this.sourceManagers = Map.ofEntries(
+                entry("yarn", new SourceManagerInfo(sourcesConfig::isGetyarn, GetyarnAudioSourceManager::new)),
+                entry("clypit", new SourceManagerInfo(sourcesConfig::isClypit, ClypitAudioSourceManager::new)),
+                entry("PornHub", new SourceManagerInfo(sourcesConfig::isPornhub, PornHubAudioSourceManager::new)),
+                entry("Reddit", new SourceManagerInfo(sourcesConfig::isReddit, RedditAudioSourceManager::new)),
+                entry("OC Remix", new SourceManagerInfo(sourcesConfig::isOcremix, OCRemixAudioSourceManager::new)),
+                entry("TikTok", new SourceManagerInfo(sourcesConfig::isTiktok, TikTokAudioSourceManager::new)),
+                entry("Mixcloud", new SourceManagerInfo(sourcesConfig::isMixcloud, MixcloudAudioSourceManager::new)),
+                entry("Soundgasm", new SourceManagerInfo(sourcesConfig::isSoundgasm, SoundGasmAudioSourceManager::new)),
+                entry("Elgato (.streamDeckAudio)", new SourceManagerInfo(sourcesConfig::isElgato, StreamDeckAudioSourceManager::new)),
+                entry("pixeldrain", new SourceManagerInfo(sourcesConfig::isPixeldrain, PixeldrainAudioSourceManager::new)),
+                entry("Text To Speech", new SourceManagerInfo(sourcesConfig::isTts, () -> {
+                    final String lang = Objects.requireNonNullElse(config.getTtsLanguage(), "en-AU");
+
+                    logger.info("TTS language is: {}", lang);
+
+                    return new SpeechAudioSourceManager(lang);
+                }))
+        );
     }
 
     @NotNull
     @Override
     public AudioPlayerManager configure(@NotNull AudioPlayerManager manager) {
-        final Logger logger = LoggerFactory.getLogger(DuncteBotInjector.class);
 
         // register custom source managers
+        for (var entry : this.sourceManagers.entrySet()) {
+            final var info = entry.getValue();
 
-        if (this.sourcesConfig.isGetyarn()) {
-            logger.info("Registering getyarn audio source manager");
-            manager.registerSourceManager(new GetyarnAudioSourceManager());
-        }
-
-        if (this.sourcesConfig.isClypit()) {
-            logger.info("Registering clypit audio source manager");
-            manager.registerSourceManager(new ClypitAudioSourceManager());
-        }
-
-        if (this.sourcesConfig.isTts()) {
-            final String lang = Objects.requireNonNullElse(this.config.getTtsLanguage(), "en-AU");
-
-            logger.info("Registering text to speech audio source manager with language {}", lang);
-            manager.registerSourceManager(new SpeechAudioSourceManager(lang));
-        }
-
-        if (this.sourcesConfig.isPornhub()) {
-            logger.info("Registering PornHub audio source manager");
-            manager.registerSourceManager(new PornHubAudioSourceManager());
-        }
-
-        if (this.sourcesConfig.isReddit()) {
-            logger.info("Registering reddit audio source manager");
-            manager.registerSourceManager(new RedditAudioSourceManager());
-        }
-
-        if (this.sourcesConfig.isOcremix()) {
-            logger.info("Registering OC Remix audio source manager");
-            manager.registerSourceManager(new OCRemixAudioSourceManager());
-        }
-
-        if (this.sourcesConfig.isTiktok()) {
-            logger.info("Registering TikTok audio source manager");
-            manager.registerSourceManager(new TikTokAudioSourceManager());
-        }
-
-        if (this.sourcesConfig.isMixcloud()) {
-            logger.info("Registering Mixcloud audio source manager");
-            manager.registerSourceManager(new MixcloudAudioSourceManager());
-        }
-
-        if (this.sourcesConfig.isSoundgasm()) {
-            logger.info("Registering Soundgasm audio source manager");
-            manager.registerSourceManager(new SoundGasmAudioSourceManager());
-        }
-
-        if (this.sourcesConfig.isElgato()) {
-            logger.warn("Elgato (.streamDeckAudio) audio source manager is not supported atm");
-//            logger.info("Registering Elgato (.streamDeckAudio) audio source manager");
-//            manager.registerSourceManager(new StreamDeckAudioSourceManager());
-        }
-
-        if (this.sourcesConfig.isPixeldrain()) {
-            logger.info("Registering pixeldrain audio source manager");
-            manager.registerSourceManager(new PixeldrainAudioSourceManager());
+            if (info.configSupplier().getAsBoolean()) {
+                logger.info("Registering {} audio source manager", entry.getKey());
+                manager.registerSourceManager(info.supplier().get());
+            } else {
+                logger.info("{} audio source manager is disabled, skipping it", entry.getKey());
+            }
         }
 
         return manager;

@@ -21,4 +21,9 @@ public class PixelDrainAudioTrack extends Mp3Track {
     public String getPlaybackUrl() {
         return String.format(PixeldrainAudioSourceManager.AUDIO_TEMPLATE, this.trackInfo.identifier);
     }
+
+    @Override
+    public PixeldrainAudioSourceManager getSourceManager() {
+        return (PixeldrainAudioSourceManager) super.getSourceManager();
+    }
 }

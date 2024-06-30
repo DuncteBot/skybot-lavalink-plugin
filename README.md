@@ -12,6 +12,7 @@ Adding support for the following sources:
 - soundgasm
 - streamDeckAudio files
   - These files are only accepted over HTTP currently
+- Pixelddrain.com
 
 ## Lavalink version compatibility
 
@@ -67,6 +68,7 @@ plugins:
             tiktok: true # tiktok.com
             mixcloud: true # mixcloud.com
             soundgasm: true # soundgasm.net
+            pixeldrain: true # pixeldrain.com
 ```
 
 ## development
