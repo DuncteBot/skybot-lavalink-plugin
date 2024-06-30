@@ -1,4 +1,5 @@
 import com.dunctebot.sourcemanagers.elgato.streamdeck.StreamDeckAudioSourceManager;
+import com.dunctebot.sourcemanagers.pixeldrain.PixeldrainAudioSourceManager;
 import com.sedmelluq.discord.lavaplayer.format.AudioDataFormat;
 import com.sedmelluq.discord.lavaplayer.format.AudioPlayerInputStream;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
@@ -15,7 +16,7 @@ import static com.sedmelluq.discord.lavaplayer.format.StandardAudioDataFormats.C
 
 public class LocalPlaybackTest {
     public static void main(String[] args) throws Exception {
-        final var mngr = new StreamDeckAudioSourceManager();
+        final var mngr = new PixeldrainAudioSourceManager();
 
         AudioPlayerManager manager = new DefaultAudioPlayerManager();
 
@@ -25,10 +26,10 @@ public class LocalPlaybackTest {
 
         AudioPlayer player = manager.createPlayer();
 
-        player.setVolume(35);
+        player.setVolume(100);
 
         manager.loadItem(
-                "https://cdn.discordapp.com/attachments/340834322674089986/1242398908815118376/Fanfare_-_Show_Intro.streamDeckAudio?ex=664f0326&is=664db1a6&hm=9a4898f7301601b3bc14cfda4101aab0ed94cdfb5fe89d2a0917dc4e01514da6&",
+                "https://pixeldrain.com/u/WUJkkH3F",
                 new FunctionalResultHandler(item -> {
                     player.playTrack(item);
                 }, playlist -> {

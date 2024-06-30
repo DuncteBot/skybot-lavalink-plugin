@@ -29,6 +29,7 @@ public class DuncteBotConfig {
         private boolean mixcloud = true;
         private boolean soundgasm = true;
         private boolean elgato = false;
+        private boolean pixeldrain = false;
 
         public boolean isGetyarn() {
             return getyarn;
@@ -108,6 +109,14 @@ public class DuncteBotConfig {
 
         public void setElgato(boolean elgato) {
             this.elgato = elgato;
+        }
+
+        public boolean isPixeldrain() {
+            return pixeldrain;
+        }
+
+        public void setPixeldrain(boolean pixeldrain) {
+            this.pixeldrain = pixeldrain;
         }
     }
 }

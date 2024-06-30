@@ -5,6 +5,7 @@ import com.dunctebot.sourcemanagers.elgato.streamdeck.StreamDeckAudioSourceManag
 import com.dunctebot.sourcemanagers.getyarn.GetyarnAudioSourceManager;
 import com.dunctebot.sourcemanagers.mixcloud.MixcloudAudioSourceManager;
 import com.dunctebot.sourcemanagers.ocremix.OCRemixAudioSourceManager;
+import com.dunctebot.sourcemanagers.pixeldrain.PixeldrainAudioSourceManager;
 import com.dunctebot.sourcemanagers.pornhub.PornHubAudioSourceManager;
 import com.dunctebot.sourcemanagers.reddit.RedditAudioSourceManager;
 import com.dunctebot.sourcemanagers.soundgasm.SoundGasmAudioSourceManager;
@@ -87,6 +88,11 @@ public class DuncteBotInjector implements AudioPlayerManagerConfiguration {
             logger.warn("Elgato (.streamDeckAudio) audio source manager is not supported atm");
 //            logger.info("Registering Elgato (.streamDeckAudio) audio source manager");
 //            manager.registerSourceManager(new StreamDeckAudioSourceManager());
+        }
+
+        if (this.sourcesConfig.isPixeldrain()) {
+            logger.info("Registering pixeldrain audio source manager");
+            manager.registerSourceManager(new PixeldrainAudioSourceManager());
         }
 
         return manager;
