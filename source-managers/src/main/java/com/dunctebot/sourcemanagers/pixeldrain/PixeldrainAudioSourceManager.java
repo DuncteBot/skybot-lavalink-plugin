@@ -87,7 +87,7 @@ public class PixeldrainAudioSourceManager extends AbstractDuncteBotHttpSource {
         );
     }
 
-    private Document loadHtml(String identifier) throws IOException {
+    /* package */ Document loadHtml(String identifier) throws IOException {
         final var httpGet = new HttpGet(PIXELDRAIN_LOOKUP_BASE + identifier);
 
         try (final CloseableHttpResponse response = getHttpInterface().execute(httpGet)) {
