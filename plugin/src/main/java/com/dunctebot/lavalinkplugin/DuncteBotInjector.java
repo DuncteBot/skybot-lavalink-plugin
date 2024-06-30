@@ -1,6 +1,7 @@
 package com.dunctebot.lavalinkplugin;
 
 import com.dunctebot.sourcemanagers.clypit.ClypitAudioSourceManager;
+import com.dunctebot.sourcemanagers.elgato.streamdeck.StreamDeckAudioSourceManager;
 import com.dunctebot.sourcemanagers.getyarn.GetyarnAudioSourceManager;
 import com.dunctebot.sourcemanagers.mixcloud.MixcloudAudioSourceManager;
 import com.dunctebot.sourcemanagers.ocremix.OCRemixAudioSourceManager;
@@ -80,6 +81,12 @@ public class DuncteBotInjector implements AudioPlayerManagerConfiguration {
         if (this.sourcesConfig.isSoundgasm()) {
             logger.info("Registering Soundgasm audio source manager");
             manager.registerSourceManager(new SoundGasmAudioSourceManager());
+        }
+
+        if (this.sourcesConfig.isElgato()) {
+            logger.warn("Elgato (.streamDeckAudio) audio source manager is not supported atm");
+//            logger.info("Registering Elgato (.streamDeckAudio) audio source manager");
+//            manager.registerSourceManager(new StreamDeckAudioSourceManager());
         }
 
         return manager;

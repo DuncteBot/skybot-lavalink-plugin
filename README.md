@@ -10,6 +10,8 @@ Adding support for the following sources:
 - TikTok (in beta, works on _most_ videos and **will** break all the time)
 - PornHub (search by prefixing with `phsearch:`)
 - soundgasm
+- streamDeckAudio files
+  - These files are only accepted over HTTP currently
 
 ## Lavalink version compatibility
 

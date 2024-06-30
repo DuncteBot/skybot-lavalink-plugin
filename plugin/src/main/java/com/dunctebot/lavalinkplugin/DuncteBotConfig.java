@@ -28,6 +28,7 @@ public class DuncteBotConfig {
         private boolean tiktok = true;
         private boolean mixcloud = true;
         private boolean soundgasm = true;
+        private boolean elgato = false;
 
         public boolean isGetyarn() {
             return getyarn;
@@ -99,6 +100,14 @@ public class DuncteBotConfig {
 
         public void setSoundgasm(boolean soundgasm) {
             this.soundgasm = soundgasm;
+        }
+
+        public boolean isElgato() {
+            return elgato;
+        }
+
+        public void setElgato(boolean elgato) {
+            this.elgato = elgato;
         }
     }
 }

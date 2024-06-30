@@ -54,9 +54,18 @@ public class Mp3Track extends DelegatedAudioTrack {
         final String trackUrl = getPlaybackUrl();
         log.debug("Starting {} track from URL: {}", manager.getSourceName(), trackUrl);
         // Setting contentLength (last param) to null makes it default to Long.MAX_VALUE
-        try (PersistentHttpStream stream = new PersistentHttpStream(httpInterface, new URI(trackUrl), this.getTrackDuration())) {
+        try (
+                final var stream = this.wrapStream(
+                        new PersistentHttpStream(httpInterface, new URI(trackUrl), this.getTrackDuration())
+                )
+        ) {
             processDelegate(createAudioTrack(this.trackInfo, stream), localExecutor);
         }
+    }
+
+    // Helper function in case we need to wrap the http stream into something else for decoding
+    protected SeekableInputStream wrapStream(SeekableInputStream stream) {
+        return stream;
     }
 
     protected InternalAudioTrack createAudioTrack(AudioTrackInfo trackInfo, SeekableInputStream stream) {
