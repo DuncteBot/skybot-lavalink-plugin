@@ -31,7 +31,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class GetyarnAudioSourceManager extends AbstractDuncteBotHttpSource {
-    private static final Pattern GETYARN_REGEX = Pattern.compile("(?:http://|https://(?:www\\.)?)?getyarn\\.io/yarn-clip/(.*)");
+    private static final Pattern GETYARN_REGEX = Pattern.compile("https?://(?:www\\.|)getyarn\\.io/yarn-clip/(.*)");
 
     @Override
     public String getSourceName() {
