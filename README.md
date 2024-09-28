@@ -12,7 +12,7 @@ Adding support for the following sources:
 - soundgasm
 - streamDeckAudio files
   - These files are only accepted over HTTP currently
-- Pixelddrain.com
+- Pixeldrain.com
 
 ## Lavalink version compatibility
 
