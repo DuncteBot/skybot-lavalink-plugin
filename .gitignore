@@ -13,3 +13,4 @@ build/*
 build/
 out/
 VERSION.txt
+application.yml

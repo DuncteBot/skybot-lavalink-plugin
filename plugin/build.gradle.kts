@@ -3,7 +3,7 @@ plugins {
     `maven-publish`
 
     alias(libs.plugins.lavalink)
-    id("com.github.johnrengelman.shadow")
+    id("com.gradleup.shadow")
     id("com.github.breadmoirai.github-release")
 }
 
@@ -17,21 +17,17 @@ val verName = "${if (preRelease) "PRE_" else ""}$pluginVersion${if(preRelease) "
 
 
 lavalinkPlugin {
-    name = "DuncteBot-plugin"
-    path = "$group.lavalinkplugin"
-    version = verName
-    apiVersion = libs.versions.lavalink.api
+    name.set("DuncteBot-plugin")
+    path.set("$group.lavalinkplugin")
+    version.set(verName)
+    apiVersion.set(libs.versions.lavalink.api)
 //    serverVersion = gitHash(libs.versions.lavalink.server)
-    serverVersion = libs.versions.lavalink.server
+    serverVersion.set(libs.versions.lavalink.server)
 }
 
 dependencies {
     implementation(projects.sourceManagers)
 }
-
-// make sure that we can resolve the dependencies
-val impl = project.configurations.implementation.get()
-impl.isCanBeResolved = true
 
 tasks {
     jar {
@@ -40,8 +36,6 @@ tasks {
     shadowJar {
         archiveBaseName.set(archivesBaseName)
         archiveClassifier.set("")
-
-        configurations = listOf(impl)
     }
     build {
         dependsOn(processResources)

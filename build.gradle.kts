@@ -1,7 +1,7 @@
 plugins {
     java
     alias(libs.plugins.lavalink) apply false
-    id("com.github.johnrengelman.shadow") version "8.1.1" apply false
+    id("com.gradleup.shadow") version "9.0.0" apply false
     id("com.github.breadmoirai.github-release") version "2.4.1" apply false
 }
 
@@ -27,7 +27,7 @@ allprojects {
     }
 
     tasks.withType<Wrapper> {
-        gradleVersion = "8.4"
+        gradleVersion = "8.11"
         distributionType = Wrapper.DistributionType.BIN
     }
 }
