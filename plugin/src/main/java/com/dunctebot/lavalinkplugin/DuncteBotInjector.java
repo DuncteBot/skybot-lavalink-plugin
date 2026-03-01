@@ -11,6 +11,7 @@ import com.dunctebot.sourcemanagers.reddit.RedditAudioSourceManager;
 import com.dunctebot.sourcemanagers.soundgasm.SoundGasmAudioSourceManager;
 import com.dunctebot.sourcemanagers.speech.SpeechAudioSourceManager;
 import com.dunctebot.sourcemanagers.tiktok.TikTokAudioSourceManager;
+import com.dunctebot.sourcemanagers.tumblr.TumblrAudioSourceManager;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import dev.arbjerg.lavalink.api.AudioPlayerManagerConfiguration;
 import org.jetbrains.annotations.NotNull;
@@ -28,7 +29,7 @@ public class DuncteBotInjector implements AudioPlayerManagerConfiguration {
     private final Logger logger = LoggerFactory.getLogger(DuncteBotInjector.class);
     private final Map<String, SourceManagerInfo> sourceManagers;
 
-    public DuncteBotInjector(DuncteBotConfig config, DuncteBotConfig.Sources sourcesConfig) {
+    public DuncteBotInjector(DuncteBotConfig config, DuncteBotConfig.Sources sourcesConfig, DuncteBotConfig.Tumblr tumblrConfig) {
 
         this.sourceManagers = Map.ofEntries(
                 entry("yarn", new SourceManagerInfo(sourcesConfig::isGetyarn, GetyarnAudioSourceManager::new)),
@@ -47,7 +48,11 @@ public class DuncteBotInjector implements AudioPlayerManagerConfiguration {
                     logger.info("TTS language is: {}", lang);
 
                     return new SpeechAudioSourceManager(lang);
-                }))
+                })),
+                entry("Tumblr", new SourceManagerInfo(
+                        sourcesConfig::isTumblr,
+                        () -> new TumblrAudioSourceManager(tumblrConfig.getConsumerKey(), tumblrConfig.getSecretKey())
+                ))
         );
     }
 

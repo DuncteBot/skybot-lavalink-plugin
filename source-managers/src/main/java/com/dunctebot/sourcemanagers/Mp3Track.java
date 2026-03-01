@@ -52,7 +52,7 @@ public class Mp3Track extends DelegatedAudioTrack {
 
     protected void loadStream(LocalAudioTrackExecutor localExecutor, HttpInterface httpInterface) throws Exception {
         final String trackUrl = getPlaybackUrl();
-        log.debug("Starting {} track from URL: {}", manager.getSourceName(), trackUrl);
+        log.info("Starting {} track from URL: {}", manager.getSourceName(), trackUrl);
         // Setting contentLength (last param) to null makes it default to Long.MAX_VALUE
         try (
                 final var stream = this.wrapStream(

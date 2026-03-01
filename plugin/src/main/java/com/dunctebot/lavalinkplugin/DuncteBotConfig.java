@@ -17,6 +17,29 @@ public class DuncteBotConfig {
     }
 
     @Component
+    @ConfigurationProperties(prefix = "plugins.dunctebot.tumblr")
+    public static class Tumblr {
+        private String consumerKey = null;
+        private String secretKey = null;
+
+        public String getConsumerKey() {
+            return consumerKey;
+        }
+
+        public void setConsumerKey(String consumerKey) {
+            this.consumerKey = consumerKey;
+        }
+
+        public String getSecretKey() {
+            return secretKey;
+        }
+
+        public void setSecretKey(String secretKey) {
+            this.secretKey = secretKey;
+        }
+    }
+
+    @Component
     @ConfigurationProperties(prefix = "plugins.dunctebot.sources")
     public static class Sources {
         private boolean getyarn = true;
@@ -30,6 +53,7 @@ public class DuncteBotConfig {
         private boolean soundgasm = true;
         private boolean elgato = false;
         private boolean pixeldrain = false;
+        private boolean tumblr = false;
 
         public boolean isGetyarn() {
             return getyarn;
@@ -117,6 +141,14 @@ public class DuncteBotConfig {
 
         public void setPixeldrain(boolean pixeldrain) {
             this.pixeldrain = pixeldrain;
+        }
+
+        public boolean isTumblr() {
+            return tumblr;
+        }
+
+        public void setTumblr(boolean tumblr) {
+            this.tumblr = tumblr;
         }
     }
 }

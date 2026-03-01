@@ -49,6 +49,9 @@ The plugin exposes these configuration options
 plugins:
     dunctebot:
         ttsLanguage: "en-AU" # language of the TTS engine
+        tumblr:
+          consumerKey: "<YOUR tumblr consumer key>"
+          secretKey: "<YOUR tumblr secret key>"
         sources:
             # true = source enabled, false = source disabled
             getyarn: true # www.getyarn.io
@@ -61,6 +64,7 @@ plugins:
             mixcloud: true # mixcloud.com
             soundgasm: true # soundgasm.net
             pixeldrain: true # pixeldrain.com
+            tumblr: true # tumblr.com, requires an app to be configured with oauth2 support
 ```
 
 ## development
