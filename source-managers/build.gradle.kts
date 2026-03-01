@@ -1,3 +1,5 @@
+import org.gradle.kotlin.dsl.register
+
 /*
  * Copyright 2021 Duncan "duncte123" Sterken
  *
@@ -20,7 +22,7 @@ plugins {
 }
 
 project.group = "com.dunctebot"
-project.version = "1.9.0"
+project.version = "1.9.1"
 val archivesBaseName = "sourcemanagers"
 
 dependencies {
@@ -45,7 +47,7 @@ val build: Task by tasks
 val clean: Task by tasks
 //val publish: Task by tasks
 
-val sourcesJar = task<Jar>("sourcesJar") {
+val sourcesJar = tasks.register<Jar>("sourcesJar") {
     archiveClassifier.set("sources")
     from(sourceSets["main"].allJava)
 }
@@ -56,7 +58,7 @@ build.apply {
     dependsOn(sourcesJar)
 
     jar.mustRunAfter(clean)
-    sourcesJar.mustRunAfter(jar)
+    sourcesJar.get().mustRunAfter(jar)
 }
 
 //publishing {

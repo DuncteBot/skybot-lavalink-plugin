@@ -81,7 +81,7 @@ githubRelease {
     owner("DuncteBot")
     repo("skybot-lavalink-plugin")
     targetCommitish(System.getenv("RELEASE_TARGET"))
-    releaseAssets(tasks.shadowJar.get().outputs.files.toList())
+//    releaseAssets(tasks.shadowJar.get().outputs.files.toList())
     tagName(verName)
     releaseName(verName)
     overwrite(false)
