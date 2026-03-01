@@ -16,24 +16,16 @@ Adding support for the following sources:
 
 ## Lavalink version compatibility
 
-| Lavalink Version | Plugin Version        |
-|------------------|-----------------------|
-| 3.x.x            | 1.4.x OR 1.5.x \*     |
-| 4.x.x            | 1.4.x, 1.5.x OR 1.6.x |
+| Lavalink Version | Plugin Version                 |
+|------------------|--------------------------------|
+| 3.x.x            | 1.4.x OR 1.5.x \*              |
+| v4 < 4.2         | 1.4.x, 1.5.x OR 1.6.x OR 1.7.0 |
+| 4.2+             | 1.7.1                          |
 
 **\* Version 1.5.x will only work on Lavalink v3 if you are running java 17 or newer**
 
-### Latest version old releases
-
-| Notation | Latest Version |
-|----------|----------------|
-| 1.4.x    | 1.4.2          |
-| 1.5.x    | 1.5.1          |
-
 # Lava*player* users
-Currently not supported
-
-~~If you need to add the source managers to your lavalink instance as well you can use this library to add them: https://github.com/DuncteBot/skybot-source-managers~~
+Currently not supported directly. You will need to compile the project manually for that.
 
 # Adding to lavalink
 

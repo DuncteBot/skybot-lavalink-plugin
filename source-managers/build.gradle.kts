@@ -53,7 +53,7 @@ val sourcesJar = tasks.register<Jar>("sourcesJar") {
 }
 
 build.apply {
-//    dependsOn(clean)
+    dependsOn(clean)
     dependsOn(jar)
     dependsOn(sourcesJar)
 

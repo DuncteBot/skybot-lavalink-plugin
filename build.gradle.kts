@@ -1,7 +1,7 @@
 plugins {
     java
     alias(libs.plugins.lavalink) apply false
-    id("com.gradleup.shadow") version "9.0.0" apply false
+    id("com.gradleup.shadow") version "9.3.2" apply false
     id("com.github.breadmoirai.github-release") version "2.4.1" apply false
 }
 
@@ -27,8 +27,12 @@ allprojects {
     }
 
     tasks.withType<Wrapper> {
-        gradleVersion = "8.11"
+        gradleVersion = "9.3.1"
         distributionType = Wrapper.DistributionType.BIN
+    }
+
+    tasks.withType<AbstractTestTask>().configureEach {
+        failOnNoDiscoveredTests = false
     }
 }
 
