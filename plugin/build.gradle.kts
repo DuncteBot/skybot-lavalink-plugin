@@ -31,6 +31,7 @@ dependencies {
 
 tasks {
     jar {
+        dependsOn(":source-managers:jar")
         archiveBaseName.set(archivesBaseName)
     }
     shadowJar {
@@ -38,6 +39,7 @@ tasks {
         archiveClassifier.set("")
     }
     build {
+        dependsOn(":source-managers:build")
         dependsOn(processResources)
         dependsOn(compileJava)
         dependsOn(shadowJar)
