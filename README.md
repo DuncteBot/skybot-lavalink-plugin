@@ -7,7 +7,7 @@ Adding support for the following sources:
 - Reddit
 - getyarn.io
 - Text To Speech (if prefixed with `speak:`)
-- TikTok (in beta, works on _most_ videos and **will** break all the time)
+- TikTok (breaking so often it is not worth my time to fix it)
 - PornHub (search by prefixing with `phsearch:`)
 - soundgasm
 - streamDeckAudio files
