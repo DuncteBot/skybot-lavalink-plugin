@@ -13,6 +13,7 @@ Adding support for the following sources:
 - streamDeckAudio files
   - These files are only accepted over HTTP currently
 - Pixeldrain.com
+- Tumblr.com (when it does not throw a 403 your way)
 
 ## Lavalink version compatibility
 
@@ -64,7 +65,7 @@ plugins:
             mixcloud: true # mixcloud.com
             soundgasm: true # soundgasm.net
             pixeldrain: true # pixeldrain.com
-            tumblr: true # tumblr.com, requires an app to be configured with oauth2 support
+            tumblr: false # tumblr.com, requires an app to be configured with oauth2 support
 ```
 
 ## development

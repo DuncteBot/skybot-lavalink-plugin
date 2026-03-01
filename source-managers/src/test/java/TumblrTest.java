@@ -11,8 +11,12 @@ public class TumblrTest {
 
         System.out.println("Token found " + token);
 
-        final var npfData = mngr.fetchPostData("pukicho", "801421495209476096");
+        final var npfData = mngr.fetchNPFData("ectoblood", "809867644956213248");
 
-        System.out.println(npfData.getMediaUrl());
+        System.out.println(npfData.text());
+
+//        final var audioTrack = mngr.fetchPostData("pukicho", "801421495209476096");
+
+//        System.out.println(audioTrack.getMediaUrl());
     }
 }

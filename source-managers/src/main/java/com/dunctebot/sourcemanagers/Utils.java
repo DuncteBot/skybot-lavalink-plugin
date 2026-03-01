@@ -23,7 +23,7 @@ import java.net.URLEncoder;
 import java.nio.charset.Charset;
 
 public class Utils {
-    public static final String USER_AGENT = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/114.0";
+    public static final String USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0";
 
     public static String urlDecode(String in) {
         return URLDecoder.decode(in, Charset.defaultCharset());
