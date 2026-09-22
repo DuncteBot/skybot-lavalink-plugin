@@ -7,7 +7,7 @@ plugins {
     id("com.github.breadmoirai.github-release")
 }
 
-val pluginVersion = Version(1, 7, 1)
+val pluginVersion = Version(1, 7, 2)
 
 group = "com.dunctebot"
 version = "$pluginVersion"
